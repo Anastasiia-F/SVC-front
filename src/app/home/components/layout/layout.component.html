@@ -13,9 +13,11 @@
       <form class="svc-home-search" fxLayout (ngSubmit)="search()">
         
         <div class="svc-home-search-country px-6" fxLayout="column" fxLayoutAlign="center center">
+          
           <div class="mb-6">
             <img src="assets/images/flag_uk.png" alt="">
           </div>
+
           <div class="fs-14">UK</div>
         </div>
       
@@ -27,5 +29,57 @@
 
       </form>
     </div>
+  </div>
+
+  <div class="svc-home-center container" fxLayout fxLayoutAlign="space-between start">
+    
+    <div *ngFor="let item of centerContent" fxFlex="25">
+      <div>
+        <img [src]="item.icon">
+      </div>
+      <h2>{{item.title}}</h2>
+      <div class="svc-home-center-content">
+        <div *ngIf="item.content.type == 'list'">
+          <div *ngFor="let v of item.content.value">
+            <fa-icon class="mr-10" [icon]="['fas', 'check']"></fa-icon>{{v}}
+          </div>
+        </div>
+        <div *ngIf="item.content.type == 'text'">
+          {{item.content.value}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="svc-home-about container">
+
+    <div class="p-40">
+
+      <div fxLayout fxLayoutAlign="space-between center">
+
+        <div fxFlex="40">
+          <img src="assets/images/single-car.png">
+          <h2>Where we get our vehicle information?</h2>
+        </div>
+
+        <div fxFlex>
+          <strong>
+            Stolen Vehicle Check provides trusted information and insights for future vehicle owners and companies looking to assess the value and risk of a vehicle.
+          </strong>
+
+          <p>
+            Stolen Vehicle Check combines information from serveral different sources and combines it with its own data to provide you with a trusted source of information and the most up-to-date facts about a vehicle. Our aim is to assistan help customers detect any potential issues with a vehicle by informing them with our most up-to-date data.
+          </p>
+        </div>
+
+      </div>
+
+      <div>
+
+      </div>
+    
+    </div>
+
   </div>
 </div>

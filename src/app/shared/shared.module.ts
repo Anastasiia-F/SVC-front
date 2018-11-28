@@ -6,11 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  faAngleDoubleRight
+  faAngleDoubleRight,
+  faCheck
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-  faAngleDoubleRight
+  faAngleDoubleRight,
+  faCheck
 );
 
 @NgModule({

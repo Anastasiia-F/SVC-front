@@ -6,7 +6,7 @@
     }
 
     .svc-home-header {
-        padding: 120px 0 240px;
+        padding: 120px 0 360px;
 
         @media #{$medium-and-down} {
             
@@ -67,5 +67,22 @@
                 }
             }
         }
+    }
+
+    .svc-home-center {
+        box-shadow: 1px 1px 48px 40px #00000014;
+        padding: 64px;
+        .svc-home-center-content {
+            font-family: $font-1;
+            font-weight: 700;
+
+            fa-icon {
+                color: #27294f;
+            }
+        }
+    }
+
+    .svc-home-about {
+        background: #ffffff;
     }
 }
