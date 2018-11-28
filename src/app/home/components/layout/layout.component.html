@@ -1,0 +1,31 @@
+<div class="svc-home">
+
+  <div class="svc-home-header text-center">
+
+    <h1 class="cl-purple mb-12 fs-42">Check free if a vehicle is stolen,</h1>
+    
+    <div class="cl-purple fs-42">
+      <span>written off or has outstanding</span><strong> finance.</strong>
+    </div>
+    
+    <div class="mt-40" fxLayout fxLayoutAlign="center center">
+      
+      <form class="svc-home-search" fxLayout (ngSubmit)="search()">
+        
+        <div class="svc-home-search-country px-6" fxLayout="column" fxLayoutAlign="center center">
+          <div class="mb-6">
+            <img src="assets/images/flag_uk.png" alt="">
+          </div>
+          <div class="fs-14">UK</div>
+        </div>
+      
+        <div class="svc-home-search-key">
+          <input type="text" [(ngModel)]="svcReg" name="search" placeholder="ENTER REG">
+        </div>
+
+        <button class="svc-home-search-btn" type="submit" (click)="search()">GO <fa-icon [icon]="['fas', 'angle-double-right']"></fa-icon></button>
+
+      </form>
+    </div>
+  </div>
+</div>

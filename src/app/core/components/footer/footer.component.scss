@@ -1,0 +1,30 @@
+@import '../../../../styles/variables';
+
+.svc-footer {
+    background: #013155;
+    
+    &-content {
+        padding: 64px 0;
+        .svc-logo span {
+            color: #ffffff;
+            font-size: 24px;
+            font-family: $font-1;
+            &:first-of-type {
+                font-weight: 700;
+            }
+        }
+
+        &-trade div{
+
+            color: rgba(255, 255, 255, 0.7);
+
+            &:first-of-type {
+                color: #ffffff;
+            }
+
+            &:last-of-type {
+                color: #549bd1;
+            }
+        }
+    }
+}

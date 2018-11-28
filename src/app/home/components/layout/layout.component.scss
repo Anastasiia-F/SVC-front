@@ -1,0 +1,71 @@
+@import '../../../../styles/variables';
+
+.svc-home {
+    h1, h2, h3, h4, h5, h6 {
+        color: #27294f !important;
+    }
+
+    .svc-home-header {
+        padding: 120px 0 240px;
+
+        @media #{$medium-and-down} {
+            
+        }
+
+        .svc-home-search {
+            height: 80px;
+            // box-shadow: -1px 2px 20px 13px #00000024;
+
+            &-country {
+                font-family: $font-1;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                height: 100%;
+                background: #3163b0;
+                color: #ffffff;
+                img {
+                    width: 23px;
+                }
+            }
+
+            &-btn {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                height: 100%;
+                color: #ffffff;
+                background: #10cf6c;
+                border: none;
+                cursor: pointer;
+                width: 120px;
+                font-size: 24px;
+                font-weight: bold;
+                &:focus {
+                    outline: none !important;
+                }
+            }
+
+            &-key {
+                height: 100%;
+                input {
+                    height: 100%;
+                    border: none;
+                    margin: 0;
+                    padding: 0 24px;
+                    background: #f1c957;
+                    width: 380px;
+                    font-size: 24px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                ::placeholder {
+                    color: #384045;
+                    font-size: 30px;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}

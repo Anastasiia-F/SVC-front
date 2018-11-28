@@ -1,0 +1,98 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@mixin padding-margin-global-styles {
+
+    @for $i from 0 through 24 {
+
+        $value: $i * 2;
+      
+        .p-#{$value} {
+            padding: #{$value}px !important;
+        }
+
+        .pt-#{$value} {
+            padding-top: #{$value}px !important;
+        }
+
+        .pb-#{$value} {
+            padding-bottom: #{$value}px !important;
+        }
+
+        .pl-#{$value} {
+            padding-left: #{$value}px !important;
+        }
+
+        .pr-#{$value} {
+            padding-right: #{$value}px !important;
+        }
+
+        .px-#{$value} {
+            padding: 0 #{$value}px !important;
+        }
+
+        .py-#{$value} {
+            padding: #{$value}px 0 !important;
+        }
+
+        .m-#{$value} {
+            margin: #{$value}px !important;
+        }
+
+        .mt-#{$value} {
+            margin-top: #{$value}px !important;
+        }
+
+        .mb-#{$value} {
+            margin-bottom: #{$value}px !important;
+        }
+
+        .ml-#{$value} {
+            margin-left: #{$value}px !important;
+        }
+
+        .mr-#{$value} {
+            margin-right: #{$value}px !important;
+        }
+    }
+}
+
+@mixin font-size-global-styles {
+
+    @for $i from 6 through 24 {
+
+        $value: $i * 2;
+      
+        .fs-#{$value} {
+            font-size: #{$value}px !important;
+        }
+    }
+}
+
+@mixin font-weight-global-styles {
+
+    @for $i from 1 through 9 {
+
+        $value: $i * 100;
+      
+        .fw-#{$value} {
+            font-weight: #{$value}px !important;
+        }
+    }
+}
+
+@include padding-margin-global-styles();
+@include font-size-global-styles();

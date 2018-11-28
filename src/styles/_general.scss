@@ -1,0 +1,31 @@
+@import './variables';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: $primary;
+    background-color: $background;
+    font-weight: 300;
+}
+
+html, body, input, button {
+    font-family: $font-2;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $secondary;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media #{$large-and-down} {
+        max-width: 1000px;
+    }
+}
+
+.cl-purple, .back-purple {
+    color: #27294f !important;
+}
+

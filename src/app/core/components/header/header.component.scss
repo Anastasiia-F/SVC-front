@@ -1,0 +1,29 @@
+@import '../../../../styles/variables';
+
+nav {
+    padding-left: 100px;
+    height: 80px;
+
+    div {
+        height: 100%;
+    }
+
+    .svc-logo{
+        height: 100%;
+        
+        span {
+            font-size: 24px;
+            font-family: $font-1;
+            &:first-of-type {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .svc-login {
+        color: #ffffff;
+        background: $secondary;
+        padding: 0 100px;
+        height: 100%;
+    }
+}
