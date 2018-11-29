@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, h6 {
     color: $secondary;
 }
 
+p {
+    margin: 0;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -26,7 +30,43 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-.cl-purple, .back-purple {
+.cl-primary {
+    color: $primary !important;
+}
+
+.back-primary {
+    background-color: $primary !important;
+}
+
+.cl-secondary {
+    color: $secondary !important;
+}
+
+.back-secondary {
+    background-color: $secondary !important;
+}
+
+.cl-purple {
     color: #27294f !important;
+}
+
+.back-purple {
+    background-color: #27294f !important;
+}
+
+.cl-white {
+    color: #ffffff !important;
+}
+
+.back-white {
+    background-color: #ffffff !important;
+}
+
+.font-primary {
+    font-family: $font-1 !important;
+}
+
+.font-secondary {
+    font-family: $font-2 !important;
 }
 

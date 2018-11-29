@@ -67,6 +67,14 @@
         .mr-#{$value} {
             margin-right: #{$value}px !important;
         }
+
+        .mx-#{$value} {
+            margin: 0 #{$value}px !important;
+        }
+
+        .my-#{$value} {
+            margin: #{$value}px 0 !important;
+        }
     }
 }
 

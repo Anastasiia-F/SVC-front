@@ -69,20 +69,86 @@
         }
     }
 
-    .svc-home-center {
-        box-shadow: 1px 1px 48px 40px #00000014;
-        padding: 64px;
-        .svc-home-center-content {
-            font-family: $font-1;
-            font-weight: 700;
+    .svc-home-body {
 
-            fa-icon {
-                color: #27294f;
+        position: relative;
+
+        .svc-home-center {
+            position: absolute;
+            width: 100%;
+            top: -180px;
+        }
+
+        .svc-home-center-container {
+            
+            box-shadow: 1px 1px 48px 40px #00000005;
+            padding: 64px;
+            
+            background: #fff;
+
+            .svc-home-center-content {
+                font-family: $font-1;
+                font-weight: 700;
+    
+                fa-icon {
+                    color: #27294f;
+                }
             }
         }
+    
+        .svc-home-about {
+            background: #ffffff;
+            padding: 15% 20%;
+
+            .svc-home-about-text {
+                font-family: $font-1;
+            }
+        }
+
+        .svc-home-pro {
+            margin-top: 100px;
+
+            &-benefits {
+                position: relative;
+
+                >div:first-of-type {
+                    position: absolute;
+                    text-align: left !important;
+                    width: 100%;
+                    height: calc(100% - 80px);
+                }
+
+                &-price {
+                    font-size: 68px;
+                    font-weight: bold;
+                }
+
+                &-text {
+                    div:first-of-type {
+                        line-height: 36px;
+                        margin-bottom: 48px;
+                    }
+                }
+            }
+
+            &-know {
+                background: $background;
+                padding-left: 100px;
+                font-family: $font-1;
+
+                &-more-btn {
+                    cursor: pointer;
+                    display: block;
+                    font-weight: bold;
+                    padding: 18px 80px;
+                    background: #fff;
+                    color: $secondary;
+                    box-shadow: 1px 1px 9px 14px #00000005;
+                }
+            }
+        }
+
     }
 
-    .svc-home-about {
-        background: #ffffff;
-    }
+    
 }

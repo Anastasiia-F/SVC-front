@@ -10,9 +10,12 @@ import {
   faCheck
 } from '@fortawesome/free-solid-svg-icons';
 
+import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
+
 library.add(
   faAngleDoubleRight,
-  faCheck
+  faCheck,
+  faCheckCircle
 );
 
 @NgModule({
