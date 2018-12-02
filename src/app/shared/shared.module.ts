@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -7,15 +8,23 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
   faAngleDoubleRight,
-  faCheck
+  faAngleRight,
+  faCheck,
+  faLock,
+  faPlus,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
 
 library.add(
   faAngleDoubleRight,
+  faAngleRight,
   faCheck,
-  faCheckCircle
+  faCheckCircle,
+  faLock,
+  faPlus,
+  faTimes
 );
 
 @NgModule({
@@ -27,7 +36,8 @@ library.add(
   exports: [
     FlexLayoutModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

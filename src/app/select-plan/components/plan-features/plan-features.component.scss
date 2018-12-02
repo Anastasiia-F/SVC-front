@@ -1,0 +1,15 @@
+.svc-plans-features {
+    .table-row {
+        padding: 16px;
+        color: #555;
+        &:nth-of-type(2n+1) {
+            background: #ececec;
+        }
+    }
+    .feature-supported {
+        color: green;
+    }
+    .feature-unsupported {
+        color: red;
+    }
+}

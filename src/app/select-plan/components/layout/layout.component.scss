@@ -1,0 +1,41 @@
+@import '../../../../styles/variables';
+
+.svc-select-plan {
+
+    font-family: $font-1;
+
+    &-searched >div {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .car-search-again {
+        height: 80px;
+
+        &-country {
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            height: 100%;
+            background: #3163b0;
+            color: #ffffff;
+            img {
+                width: 20px;
+            }
+        }
+
+        &-key {
+            height: 100%;
+            padding: 0 36px;
+            background: #f1c957;
+            color: #384045;
+            font-size: 30px;
+            font-weight: 900;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    }
+
+    &-plans {
+        background: $background;
+    }
+}

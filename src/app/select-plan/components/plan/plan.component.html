@@ -1,0 +1,21 @@
+<div class="svc-plan" fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px" [ngClass]="{'back-white': checkType !== 'Basic Check'}">
+  <div>
+    <img [src]="carImage">
+  </div>
+  
+  <h3 class="fs-28">{{checkType}}</h3>
+
+  <p class="fs-24">{{checkCount}} check</p>
+
+  <div>
+    <a class="svc-plan-buy-btn" [ngClass]="{'back-primary': checkType === 'Basic Check'}" (click)="selectPlan()">Buy   £{{price}}</a>
+  </div>
+
+  <div class="multiplan-description text-center" *ngIf="checkType === 'Multicheck'">
+    <div class="fs-18">Just <span class="cl-secondary">£9.99</span> each</div>
+    <div>Redeem within 2 years</div>
+  </div>
+
+  <img *ngIf="mostPopular" class="best-seller" src="assets/images/best-seller.png" alt="">
+
+</div>

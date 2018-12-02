@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -8,13 +7,7 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent implements OnInit {
 
-  svcReg: string;
-
-  centerContent: any;
-
-  constructor(
-    private router: Router
-  ) { }
+  constructor() { }
 
   ngOnInit() {
   }

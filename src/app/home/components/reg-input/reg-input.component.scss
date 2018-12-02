@@ -1,0 +1,61 @@
+@import '../../../../styles/variables';
+
+.svc-home-header {
+    padding: 120px 0 360px;
+
+    .svc-home-search {
+        height: 80px;
+
+        &-country {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            height: 100%;
+            background: #3163b0;
+            color: #ffffff;
+            img {
+                width: 20px;
+            }
+        }
+
+        &-btn {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            height: 100%;
+            color: #ffffff;
+            background: #10cf6c;
+            border: none;
+            cursor: pointer;
+            width: 120px;
+            font-size: 24px;
+            font-family: $font-2;
+            &:focus {
+                outline: none !important;
+            }
+        }
+
+        &-key {
+            height: 100%;
+            font-family: $font-2;
+            input {
+                height: 100%;
+                border: none;
+                margin: 0;
+                padding: 0 24px;
+                background: #f1c957;
+                width: 380px;
+                font-size: 24px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            ::placeholder {
+                color: #384045;
+                font-size: 30px;
+                font-weight: 900;
+                font-family: $font-2;
+            }
+        }
+    }
+}

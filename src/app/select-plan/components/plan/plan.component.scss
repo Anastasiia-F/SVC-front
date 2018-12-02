@@ -1,0 +1,34 @@
+@import '../../../../styles/variables';
+
+.svc-plan {
+    padding: 50px 0 70px;
+    background: $background;
+    position: relative;
+    width: 100%;
+
+    img {
+        height: 70px;
+    }
+    .svc-plan-buy-btn {
+        cursor: pointer;
+        display: block;
+        font-weight: bold;
+        padding: 18px 40px;
+        color: #fff;
+        background: $green;
+        font-size: 18px;
+    }
+
+    .multiplan-description {
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .best-seller {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: auto;
+    }
+}

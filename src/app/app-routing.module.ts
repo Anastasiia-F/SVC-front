@@ -5,6 +5,14 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './home/home.module#HomeModule'
+  },
+  {
+    path: 'plans',
+    loadChildren: './select-plan/select-plan.module#SelectPlanModule'
+  },
+  {
+    path: 'payment-details',
+    loadChildren: './payment-details/payment-details.module#PaymentDetailsModule'
   }
 ];
 

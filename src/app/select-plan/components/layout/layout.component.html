@@ -1,0 +1,70 @@
+<div class="svc-select-plan">
+
+    <div class="svc-select-plan-searched">
+
+        <div class="container" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="car-searched" fxLayout fxLayoutAlign="start center" fxLayoutGap="36px">
+                <div>
+                    <div class="fs-24 cl-secondary mb-12"><strong>Rolls Royce</strong> Phantom</div>
+                    <div class="fs-20">
+                        <span class="mr-36">
+                            Color: <strong>Black</strong>
+                        </span>
+                        <span>
+                            Year: v08
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <img width="200" src="assets/images/car-example.png" alt="">
+                </div>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="start end">
+                
+                <div fxLayout="row" class="car-search-again">
+                    <div class="car-search-again-country px-6" fxLayout="column" fxLayoutAlign="center center">
+                        
+                        <div class="mb-6">
+                        <img src="assets/images/flag_uk.png" alt="">
+                        </div>
+            
+                        <div class="fs-14">UK</div>
+                    </div>
+                    
+                    <div class="car-search-again-key" fxLayout fxLayoutAlign="center center">
+                        <span>KWA11S</span>
+                    </div>
+                </div>
+
+                <div>
+                    Not the right vehicle? <span class="cl-secondary">Search Again ></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-white">
+        <div class="container pt-24">
+            <h2>Get a reliable report instantly</h2>
+            <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="24px">
+                <div class="svc-select-plan-plans" fxFlex="66">
+                    <div class="p-24">
+                        <div class="text-center fs-20 mb-20">Protect yourself with a <strong class="cl-secondary">£30,000</strong> Guarantvee</div>
+                        <div fxLayout fxLayoutGap="24px">
+                            <app-plan fxFlex [checkType]="'Multicheck'" (selected)="selectPlan($event)"></app-plan>
+                            <app-plan fxFlex [checkType]="'SV Check'" [mostPopular]="true" (selected)="selectPlan($event)"></app-plan>
+                        </div>
+                    </div>
+                </div>
+                <div fxFlex class="svc-select-plan-basic pt-24">
+                    <app-plan [checkType]="'Basic Check'" (selected)="selectPlan($event)"></app-plan>
+                </div>
+            </div>
+
+            <div class="py-40">
+                <app-plan-features></app-plan-features>
+            </div>
+        </div>
+    </div>
+</div>

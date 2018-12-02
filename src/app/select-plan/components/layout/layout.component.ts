@@ -8,15 +8,15 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent implements OnInit {
 
-  svcReg: string;
-
-  centerContent: any;
-
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+  }
+
+  selectPlan(plan) {
+    this.router.navigate(['/payment-details'],  { queryParams: { plan: plan.toLowerCase().replace(' ', '-') } });
   }
 
 }

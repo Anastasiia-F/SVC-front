@@ -1,133 +1,15 @@
 <div class="svc-home">
 
-  <div class="svc-home-header text-center">
-
-    <h1 class="cl-purple fs-42">Check free if a vehicle is stolen,</h1>
-    
-    <div class="cl-purple fs-42 my-36">
-      <span>written off or has outstanding</span><strong> finance.</strong>
-    </div>
-    
-    <div class="mt-40" fxLayout fxLayoutAlign="center center">
-      
-      <form class="svc-home-search" fxLayout (ngSubmit)="search()">
-        
-        <div class="svc-home-search-country px-6" fxLayout="column" fxLayoutAlign="center center">
-          
-          <div class="mb-6">
-            <img src="assets/images/flag_uk.png" alt="">
-          </div>
-
-          <div class="fs-14">UK</div>
-        </div>
-      
-        <div class="svc-home-search-key">
-          <input type="text" [(ngModel)]="svcReg" name="search" placeholder="ENTER REG">
-        </div>
-
-        <button class="svc-home-search-btn" type="submit" (click)="search()">GO <fa-icon [icon]="['fas', 'angle-double-right']"></fa-icon></button>
-
-      </form>
-    </div>
-  </div>
+  <app-reg-input></app-reg-input>
 
   <div class="svc-home-body">
 
     <div class="svc-home-center" fxLayout fxLayoutAlign="center center">
-
-      <div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
-        
-        <div *ngFor="let item of centerContent" fxFlex="28">
-          <div>
-            <img [src]="item.icon">
-          </div>
-
-          <h1>{{item.title}}</h1>
-
-          <div class="svc-home-center-content">
-
-            <div *ngIf="item.content.type == 'list'">
-              <div *ngFor="let v of item.content.value">
-                <fa-icon class="mr-10" [icon]="['fas', 'check']"></fa-icon>{{v}}
-              </div>
-            </div>
-
-            <div *ngIf="item.content.type == 'text'">
-              {{item.content.value}}
-            </div>
-
-          </div>
-        </div>
-
-      </div>
+      <app-site-benefits></app-site-benefits>      
     </div>
 
     <div class="svc-home-about">
-
-      <div class="container">
-
-        <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="100px">
-
-          <div fxFlex="34">
-            <img src="assets/images/single-car.png">
-            <h1>Where we get our vehicle information?</h1>  
-          </div>
-
-          <div fxFlex="60" class="svc-home-about-text">
-            <strong>
-              Stolen Vehicle Check provides trusted information and insights for future vehicle owners and companies looking to assess the value and risk of a vehicle.
-            </strong>
-
-            <p>
-              Stolen Vehicle Check combines information from serveral different sources and combines it with its own data to provide you with a trusted source of information and the most up-to-date facts about a vehicle. Our aim is to assistan help customers detect any potential issues with a vehicle by informing them with our most up-to-date data.
-            </p>
-          </div>
-
-        </div>
-
-        <div fxLayout fxLayoutAlign="start stretch" class="svc-home-pro text-center">
-
-          <div class="svc-home-pro-benefits back-secondary cl-white p-40" fxFlex="48">
-
-            <div fxLayout fxLayoutAlign="start center">
-              <img src="assets/images/lock.png">
-            </div>
-
-            <div class="p-40 svc-home-pro-benefits-text">
-
-              <div class="fs-32">
-                <strong>Go pro </strong>to have more benefits
-              </div>
-
-              <div class="svc-home-pro-benefits-price">£2.99</div>
-
-              <div class="font-primary mt-20"><strong>15 days </strong>and 3 lookups</div>
-
-            </div>
-
-          </div>
-
-          <div class="svc-home-pro-know" fxFlex fxLayout fxLayoutAlign="start center">
-            
-            <div fxLayout="column" fxLayoutAlign="start start">
-              
-              <div *ngFor="let item of ['one', 'two', 'three']" fxLayout fxLayoutAlign="start center" class="mb-12">
-                <fa-icon class="cl-purple mr-16 fs-30" [icon]="['far', 'check-circle']"></fa-icon>
-                <span class="fs-16">Lorem ipsum item {{item}}</span>
-              </div>
-
-              <div class="mt-24">
-                <a class="svc-home-pro-know-more-btn">Know more about here</a>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      
-      </div>
-
+      <app-about></app-about>
     </div>
 
   </div>

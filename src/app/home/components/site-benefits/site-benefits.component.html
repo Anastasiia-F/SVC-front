@@ -1,0 +1,25 @@
+<div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
+        
+  <div *ngFor="let item of centerContent" fxFlex="28">
+    <div>
+      <img [src]="item.icon">
+    </div>
+
+    <h2>{{item.title}}</h2>
+
+    <div class="svc-home-center-content">
+
+      <div *ngIf="item.content.type == 'list'">
+        <div *ngFor="let v of item.content.value">
+          <fa-icon class="mr-10" [icon]="['fas', 'check']"></fa-icon>{{v}}
+        </div>
+      </div>
+
+      <div *ngIf="item.content.type == 'text'">
+        {{item.content.value}}
+      </div>
+
+    </div>
+  </div>
+
+</div>

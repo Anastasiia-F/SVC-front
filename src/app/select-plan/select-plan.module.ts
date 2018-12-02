@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { LayoutComponent } from './components/layout/layout.component';
-import { RegInputComponent } from './components/reg-input/reg-input.component';
-import { SiteBenefitsComponent } from './components/site-benefits/site-benefits.component';
-import { AboutComponent } from './components/about/about.component';
+import { PlanComponent } from './components/plan/plan.component';
+import { PlanFeaturesComponent } from './components/plan-features/plan-features.component';
 
 const routes = [
   {
@@ -15,16 +14,11 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [
-    LayoutComponent,
-    RegInputComponent,
-    SiteBenefitsComponent,
-    AboutComponent
-  ],
+  declarations: [LayoutComponent, PlanComponent, PlanFeaturesComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule
   ]
 })
-export class HomeModule { }
+export class SelectPlanModule { }
