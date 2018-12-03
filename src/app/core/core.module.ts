@@ -1,8 +1,8 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { RequestInterceptor } from './services/request.interceptor';
 
+import { RequestInterceptor } from './services/request.interceptor';
 import { SharedModule } from '../shared/shared.module';
 
 import { FooterComponent } from './components/footer/footer.component';

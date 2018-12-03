@@ -4,7 +4,36 @@
     <fa-icon [icon]="['fas', 'lock']"></fa-icon>
   </div>
   <div class="summary-box">
+
     <div class="fs-18 cl-purple font-secondary">Your Summary</div>
-    
+
+    <div class="mb-12">
+      You've chosen HPI {{plan | titlecase}} 3-pack for the following vehicle:
+    </div>
+
+    <div class="mb-12">
+      <strong>Registration Number</strong>
+      <p>{{summary.vrm}}</p>
+    </div>
+
+    <div class="mb-12">
+      <strong>Make</strong>
+      <p>{{summary.make}}</p>
+    </div>
+
+    <div class="mb-12">
+      <strong>Model</strong>
+      <p>{{summary.model}}</p>
+    </div>
+
+    <div class="mb-12">
+      <strong>Year of Manufacture</strong>
+      <p>{{summary.year}}</p>
+    </div>
+
+    <div class="mb-12">
+      <strong>Color</strong>
+      <p>{{summary.colour}}</p>
+    </div>
   </div>
 </div>

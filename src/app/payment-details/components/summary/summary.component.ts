@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { CheckService } from '../../../core/services/check.service';
 
 @Component({
   selector: 'app-summary',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SummaryComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  plan: string;
+
+  summary: any;
+
+  constructor(
+    private check: CheckService
+  ) { }
 
   ngOnInit() {
+    this.plan = this.plan.replace('-', ' ');
+    this.summary = this.check.getSummary();
   }
 
 }

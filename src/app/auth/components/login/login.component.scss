@@ -1,0 +1,42 @@
+.svc-login {
+  padding: 200px 0 300px;
+  input {
+    border: none;
+    padding: none;
+    margin: 16px 0;
+    background: #ececec;
+    width: 300px;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 2px;
+    display: block;
+
+    &:focus {
+        outline: none;
+    }
+  }
+
+  button {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #ffffff;
+    background: #10cf6c;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    width: 300px;
+    &:focus {
+        outline: none !important;
+    }
+  }
+
+  .input-invalid {
+    border: 1px solid #ff8e8c !important;
+  }
+
+  .form-border {
+      padding: 14px;
+      border-bottom: 2px solid #ececec;
+      margin-bottom: 24px;
+  }
+}

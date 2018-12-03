@@ -1,25 +1,25 @@
 <div fxFlex>
   <div class="cl-purple fs-22 font-secondary py-36">Pay using card</div>
-  
+
   <form [formGroup]="paymentForm" (ngSubmit)="onPaymentSubmit()">
 
     <div fxLayout="row wrap" fxLayoutAlign="space-between start">
       <div fxFlex="49">
-        <input type="text" formControlName="name" placeholder="Name" [ngClass]="{'input-invalid': submitted && name.errors?.required}">
+        <input name="name" type="text" formControlName="name" placeholder="Name" [ngClass]="{'input-invalid': submitted && name.errors?.required}">
       </div>
 
       <div fxFlex="49">
-        <input type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
+        <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
       </div>
 
       <div fxFlex="49">
         <label class="cl-secondary">Card or debit card</label>
-        <input type="number" formControlName="cardNumber" placeholder="Card" [ngClass]="{'input-invalid': submitted && cardNumber.errors?.required}">
+        <input name="creditCard" type="number" formControlName="creditCard" placeholder="Card" [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}">
       </div>
 
       <div fxFlex="49">
         <label class="cl-secondary">We will send a link to the report to:</label>
-        <input type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
+        <input name="email" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
       </div>
     </div>
 

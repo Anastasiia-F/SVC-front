@@ -1,7 +1,7 @@
 <nav>
-  
+
   <div fxLayout fxLayoutAlign="space-between">
-    
+
     <div class="svc-logo" fxLayout fxLayoutAlign="center center">
       <a [routerLink]="['/']">
         <span>StolenVehicle</span>
@@ -9,8 +9,8 @@
       </a>
     </div>
 
-    <div class="svc-login cursor-pointer" fxLayout fxLayoutAlign="center center">
-      <strong>Login</strong>
+    <div class="svc-login cursor-pointer" fxLayout fxLayoutAlign="center center" (click)="signInOrOut()">
+      <strong>{{auth.loggedIn ? 'Log out' : 'Log in'}}</strong>
     </div>
 
   </div>

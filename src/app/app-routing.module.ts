@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'welcome',
     loadChildren: './home/home.module#HomeModule'
   },
   {
@@ -13,6 +14,20 @@ const routes: Routes = [
   {
     path: 'payment-details',
     loadChildren: './payment-details/payment-details.module#PaymentDetailsModule'
+  },
+  {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path: 'main',
+    canActivate: [AuthGuard],
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },
+  {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full'
   }
 ];
 

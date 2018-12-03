@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/angular-notifier/styles.css';
 @import './styles/main';
+
+.notifier__container {
+  ul {
+    margin: 0 !important;
+  }
+}

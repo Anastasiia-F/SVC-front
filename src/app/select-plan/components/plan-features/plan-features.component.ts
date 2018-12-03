@@ -16,7 +16,6 @@ export class PlanFeaturesComponent implements OnInit {
   ngOnInit() {
     this.widget = widget['data'];
     this.features = this.widget.features;
-    console.log(this.features);
   }
 
   isSupported (index) {
