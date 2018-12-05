@@ -4,7 +4,7 @@ import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'welcome',
+    path: '',
     loadChildren: './home/home.module#HomeModule'
   },
   {
@@ -24,11 +24,11 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
-  {
-    path: '',
-    redirectTo: 'main',
-    pathMatch: 'full'
-  }
+  // {
+  //   path: '',
+  //   redirectTo: '',
+  //   pathMatch: 'full'
+  // }
 ];
 
 @NgModule({

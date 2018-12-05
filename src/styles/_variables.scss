@@ -17,17 +17,9 @@ $font-2: 'Museo';
 @font-face {
     font-family: 'Museo';
     font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: url(/assets/fonts/Museo100-Regular.otf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Museo';
-    font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/assets/fonts/Museo300-Regular.otf) format('opentype');
+    src: url(/assets/fonts/Museo/Museo300-Regular.otf) format('opentype');
 }
 
 @font-face {
@@ -35,7 +27,7 @@ $font-2: 'Museo';
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: url(/assets/fonts/Museo500-Regular.otf) format('opentype');
+    src: url(/assets/fonts/Museo/Museo500-Regular.otf) format('opentype');
 }
 
 @font-face {
@@ -43,18 +35,28 @@ $font-2: 'Museo';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(/assets/fonts/Museo700-Regular.otf) format('opentype');
+    src: url(/assets/fonts/Museo/Museo700-Regular.otf) format('opentype');
 }
 
+/* latin-ext */
 @font-face {
-    font-family: 'Museo';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(/assets/fonts/Museo900-Regular.otf) format('opentype');
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(/assets/fonts/Lato/Lato-Regular.ttf) format('woff2');
 }
 
-/* 
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lato Bold'), local('Lato-Bold'), url(/assets/fonts/Lato/Lato-Bold.ttf) format('woff2');
+}
+
+/*
  ** Responsive
  */
 $small-screen: 600px !default;

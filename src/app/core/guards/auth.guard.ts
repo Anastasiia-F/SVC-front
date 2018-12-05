@@ -22,6 +22,11 @@ export class AuthGuard implements CanActivate {
     return this.auth.isLoggedIn()
       .pipe(
         map(res => {
+          if (!res['user']) {
+            this.auth.loggedIn = false;
+            this.router.navigate(['/']);
+            return false;
+          }
           localStorage.setItem('email', res['user']);
           this.auth.loggedIn = true;
           return true;
@@ -30,7 +35,7 @@ export class AuthGuard implements CanActivate {
           this.auth.logout().subscribe(() => {
             this.auth.loggedIn = false;
           });
-          this.router.navigate(['/welcome']);
+          this.router.navigate(['/']);
           return of(false);
         })
       );
