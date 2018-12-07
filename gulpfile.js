@@ -11,7 +11,7 @@ const replace = require('gulp-string-replace');
 // const [command, value] = (process.argv[2]) ? process.argv[2].split('=') : '';
 // const [command1, env] = (process.argv[3]) ? process.argv[3].split('=') : '';
 // const src = (value) ? `./dist/${value}` : `./dist`;
-const src = './dist';
+const src = './dist/browser';
 
 gulp.task('pack-js', () => {
   return gulp.src([`${src}/*.js`])
@@ -45,7 +45,7 @@ gulp.task('gzip', gulp.series('pack-js', 'pack-css', 'pack-index-html', () => {
 
 gulp.task('clean', gulp.series('gzip', () => {
   return gulp.src([`${src}/*.js`, `${src}/*.css`, `${src}/*.html`], {read: false})
-    .pipe(clean());
+    // .pipe(clean());
 }));
 
 gulp.task('default', gulp.parallel('clean'));

@@ -29,7 +29,7 @@ const customNotifierConfig: NotifierOptions = {
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'svc'}),
     NgxSpinnerModule,
     NotifierModule.withConfig(customNotifierConfig),
     AppRoutingModule,

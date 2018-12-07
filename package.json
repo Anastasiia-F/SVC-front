@@ -7,6 +7,10 @@
     "build": "ng build",
     "prod": "ng build --prod && gulp",
     "swa-prod": "ng build --prod && sw-precache --root=dist --config=precache-config.js && gulp",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/server.js",
+    "build:client-and-server-bundles": "ng build --prod && ng run svc:server",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,6 +27,7 @@
     "@angular/http": "~7.0.0",
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
+    "@angular/platform-server": "^7.1.2",
     "@angular/pwa": "^0.11.1",
     "@angular/router": "~7.0.0",
     "@angular/service-worker": "~7.0.0",
@@ -31,10 +36,13 @@
     "@fortawesome/free-brands-svg-icons": "^5.5.0",
     "@fortawesome/free-regular-svg-icons": "^5.5.0",
     "@fortawesome/free-solid-svg-icons": "^5.5.0",
+    "@nguniversal/express-engine": "^7.0.2",
+    "@nguniversal/module-map-ngfactory-loader": "^7.0.2",
     "angular-notifier": "^4.1.1",
     "core-js": "^2.5.4",
     "ngx-spinner": "^6.1.2",
     "rxjs": "~6.3.3",
+    "ts-loader": "^5.3.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -68,6 +76,7 @@
     "sw-precache-webpack-plugin": "^0.11.5",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "typescript": "~3.1.6",
+    "webpack-cli": "^3.1.2"
   }
 }
