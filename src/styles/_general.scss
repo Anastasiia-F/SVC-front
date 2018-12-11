@@ -37,6 +37,10 @@ a {
     @media #{$large-and-down} {
         max-width: 1000px;
     }
+
+    @media #{$medium-and-down} {
+        padding: 0 15px;
+    }
 }
 
 .cl-primary {
@@ -56,11 +60,11 @@ a {
 }
 
 .cl-purple {
-    color: #27294f !important;
+    color: $purple!important;
 }
 
 .back-purple {
-    background-color: #27294f !important;
+    background-color: $purple!important;
 }
 
 .cl-white {

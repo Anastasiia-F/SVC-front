@@ -26,4 +26,15 @@ nav {
         padding: 0 100px;
         height: 100%;
     }
+
+    @media #{$medium-and-down} {
+        padding-left: 15px;
+        height: 60px;
+
+        .svc-login {
+            background: $background;
+            color: $secondary;
+            padding: 0 30px;
+        }
+    }
 }

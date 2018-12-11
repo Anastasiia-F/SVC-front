@@ -3,8 +3,45 @@
 .svc-home-header {
     padding: 120px 0 360px;
 
+    @media #{$medium-and-down} {
+
+        padding: 70px 30px;
+
+        .svc-home-header-top {
+            display: none;
+        }
+
+        .svc-home-search {
+
+            &-country div {
+                margin: 0 !important;
+            }
+
+            &-key input {
+                width: 100% !important;
+            }
+
+            &-btn {
+                font-size: 16px;
+                width: 77px;
+            }
+
+            ::placeholder {
+                font-size: 20px !important;
+            }
+        }
+
+        form {
+            height: 50px !important;
+        }
+    }
+
     .svc-home-search {
-        height: 80px;
+
+        form {
+            display: flex;
+            height: 80px;
+        }
 
         &-country {
             border-top-left-radius: 5px;

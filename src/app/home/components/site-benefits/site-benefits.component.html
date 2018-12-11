@@ -1,7 +1,7 @@
 <div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
         
-  <div *ngFor="let item of centerContent" fxFlex="28">
-    <div>
+  <div *ngFor="let item of centerContent" fxFlex="28" fxFlex.lt-md="100" [ngClass.lt-md]="{'mb-12': true}">
+    <div fxShow fxHide.lt-md>
       <img [src]="item.icon">
     </div>
 

@@ -8,8 +8,8 @@
     </a>
   </div>
   <div class="payment-tab-content back-white">
-    <div class="container" fxLayout="row" fxLayoutAlign="space-between stretch">
-      <div fxFlex="63">
+    <div class="container" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column">
+      <div fxFlex="63" fxFlex.lt-md="false">
         <ng-container *ngIf="paymentMethod == 'card'">
           <app-payment-card [plan]="plan"></app-payment-card>
         </ng-container>
@@ -18,7 +18,7 @@
         </ng-container>
       </div>
 
-      <div fxFlex="30">
+      <div fxFlex="30" fxFlex.lt-md="false">
         <app-summary [plan]="plan"></app-summary>
       </div>
     </div>

@@ -1,3 +1,5 @@
+@import '../../../../styles/_variables';
+
 .svc-home {
 
     .svc-home-body {
@@ -8,11 +10,19 @@
             position: absolute;
             width: 100%;
             top: -180px;
+
+            @media #{$medium-and-down} {
+                position: unset;
+            }
         }
     
         .svc-home-about {
             background: #ffffff;
             padding: 15% 20%;
+
+            @media #{$medium-and-down} {
+                padding: 40px 15px;
+            }
         }
 
     }

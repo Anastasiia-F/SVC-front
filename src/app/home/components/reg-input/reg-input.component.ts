@@ -28,6 +28,7 @@ export class RegInputComponent implements OnInit {
         return;
       }
       this.check.searchedData = res.data;
+      localStorage.setItem('car', JSON.stringify(res.data));
       this.router.navigate(['/plans']);
     });
   }

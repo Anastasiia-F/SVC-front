@@ -5,6 +5,19 @@
     
     &-content {
         padding: 64px 0;
+
+        flex-direction: row;
+        display: flex;
+        place-content: center space-between;
+        align-items: center;
+
+        @media #{$medium-and-down} {
+            flex-direction: column;
+            * {
+                text-align: center !important;
+            }
+        }
+
         .svc-logo span {
             color: #ffffff;
             font-size: 24px;

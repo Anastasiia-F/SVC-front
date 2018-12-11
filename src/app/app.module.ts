@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+// import { TransferHttpCacheModule } from '@nguniversal/';
 import { environment } from '../environments/environment';
 
 const customNotifierConfig: NotifierOptions = {

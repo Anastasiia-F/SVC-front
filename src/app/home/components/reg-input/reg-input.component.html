@@ -1,14 +1,16 @@
 <div class="svc-home-header text-center">
 
-  <h1 class="cl-purple fs-42">Check free if a vehicle is stolen,</h1>
+  <div class="svc-home-header-top">
+    <h1 class="cl-purple fs-42">Check free if a vehicle is stolen,</h1>
 
-  <div class="cl-purple fs-42 my-36 font-secondary">
-    <span>written off or has outstanding</span><strong> finance.</strong>
+    <div class="cl-purple fs-42 my-36 font-secondary">
+      <span>written off or has outstanding</span><strong> finance.</strong>
+    </div>
   </div>
 
-  <div class="mt-40" fxLayout fxLayoutAlign="center center">
+  <div class="svc-home-search" fxLayout fxLayoutAlign="center center">
 
-    <form class="svc-home-search" fxLayout (ngSubmit)="search()">
+    <form (ngSubmit)="search()">
 
       <div class="svc-home-search-country px-6" fxLayout="column" fxLayoutAlign="center center">
 

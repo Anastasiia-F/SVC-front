@@ -17,6 +17,7 @@ export class LayoutComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.check.searchedData = JSON.parse(localStorage.getItem('car'));
     if (!this.check.searchedData) {
       this.router.navigate(['/']);
       return;

@@ -1,12 +1,12 @@
 <div class="svc-select-plan">
 
-    <div class="svc-select-plan-searched">
+    <div class="svc-select-plan-searched container">
 
-        <div class="container" fxLayout="row" fxLayoutAlign="space-between center">
-            <div class="car-searched" fxLayout fxLayoutAlign="start center" fxLayoutGap="36px">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column">
+            <div class="car-searched" fxLayout fxLayoutAlign="start center" fxLayoutGap="36px" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
                 <div>
                     <div class="fs-20 cl-secondary mb-12"><strong>{{carData.make}} </strong>{{carData.model}}</div>
-                    <div class="fs-20">
+                    <div class="fs-20 text-center">
                         <span class="mr-36">
                             Color: <strong>{{carData.colour}}</strong>
                         </span>
@@ -20,9 +20,9 @@
                 </div>
             </div>
 
-            <div fxLayout="column" fxLayoutAlign="start end">
+            <div fxLayout="column" fxLayoutAlign="start end" [ngClass.lt-md]="{'mt-20': true}">
 
-                <div fxLayout="row" class="car-search-again">
+                <div fxLayout="row" class="car-search-again" fxShow fxHide.lt-md>
                     <div class="car-search-again-country px-6" fxLayout="column" fxLayoutAlign="center center">
 
                         <div class="mb-6">
@@ -46,18 +46,18 @@
 
     <div class="back-white">
         <div class="container pt-24">
-            <h2>Get a reliable report instantly</h2>
-            <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="24px">
-                <div class="svc-select-plan-plans" fxFlex="66">
+            <h2 [ngClass.lt-md]="{'text-center': true}">Get a reliable report instantly</h2>
+            <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="24px" fxLayout.lt-md="column">
+                <div class="svc-select-plan-plans" fxFlex="66" fxFlex.lt-md="false" [ngClass.lt-md]="{'width-100': true}">
                     <div class="p-24">
                         <div class="text-center fs-20 mb-20">Protect yourself with a <strong class="cl-secondary">£30,000</strong> Guarantvee</div>
-                        <div fxLayout fxLayoutGap="24px">
+                        <div fxLayout fxLayoutGap="24px" fxLayout.lt-md="column">
                             <app-plan fxFlex [checkType]="'Multicheck'" (selected)="selectPlan($event)"></app-plan>
                             <app-plan fxFlex [checkType]="'SV Check'" [mostPopular]="true" (selected)="selectPlan($event)"></app-plan>
                         </div>
                     </div>
                 </div>
-                <div fxFlex class="svc-select-plan-basic pt-24">
+                <div fxFlex fxFlex.lt-md="false" class="svc-select-plan-basic pt-24" [ngClass.lt-md]="{'width-100': true}">
                     <app-plan [checkType]="'Basic Check'" (selected)="selectPlan($event)"></app-plan>
                 </div>
             </div>

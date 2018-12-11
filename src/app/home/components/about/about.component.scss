@@ -30,6 +30,10 @@
         background: $background;
         padding-left: 100px;
 
+        @media #{$medium-and-down} {
+            padding: 20px;
+        }
+
         &-more-btn {
             cursor: pointer;
             display: block;
