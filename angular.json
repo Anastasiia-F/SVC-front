@@ -68,6 +68,14 @@
             "tsConfig": "src/tsconfig.server.json"
           }
         },
+        "prerender": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/prerender",
+            "main": "src/main.prerender.ts",
+            "tsConfig": "src/tsconfig.prerender.json"
+          }
+        },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {

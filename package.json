@@ -11,6 +11,7 @@
     "serve:ssr": "node dist/server.js",
     "build:client-and-server-bundles": "ng build --prod && ng run svc:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
+    "build:client-and-prerender-bundles": "ng build --prod && ng run svc:prerender",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

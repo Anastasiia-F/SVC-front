@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="top-check" fxLayout fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center" fxLayoutGap.lt-md="30px">
+    <div class="fs-32 cl-secondary">Stolen Vehicle Check</div>
+    <div class="svc-check" fxLayout fxLayoutAlign="center center">
+
+      <form (ngSubmit)="search()">
+
+        <div class="svc-check-country px-6" fxLayout="column" fxLayoutAlign="center center">
+
+          <div>
+            <img src="assets/images/flag_uk.png" alt="">
+          </div>
+
+          <div class="fs-14">UK</div>
+        </div>
+
+        <div class="svc-check-key">
+          <input type="text" [(ngModel)]="svcReg" name="search" placeholder="ENTER REG">
+        </div>
+
+        <button type="submit" fxHide></button>
+      </form>
+    </div>
+  </div>
+</div>

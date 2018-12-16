@@ -1,0 +1,12 @@
+@import '../../../../styles/variables';
+
+.result-tab {
+  padding: 12px;
+  font-family: $font-2;
+  color: $secondary;
+
+  &-selected {
+    background: $secondary;
+    color: #ffffff;
+  }
+}

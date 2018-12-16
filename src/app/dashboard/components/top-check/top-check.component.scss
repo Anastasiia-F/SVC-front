@@ -1,0 +1,62 @@
+@import '../../../../styles/variables';
+
+@media #{$medium-and-down} {
+
+  .svc-check {
+
+      &-country div {
+          margin: 0 !important;
+      }
+
+      &-key input {
+          width: 100% !important;
+      }
+  }
+
+}
+
+.top-check {
+  padding: 5rem 0;
+}
+
+.svc-check {
+
+  form {
+      display: flex;
+      height: 50px;
+  }
+
+  &-country {
+      height: 100%;
+      background: #3163b0;
+      color: #ffffff;
+      img {
+          width: 20px;
+      }
+  }
+
+  &-key {
+      height: 100%;
+      font-family: $font-2;
+      input {
+          height: 100%;
+          border: none;
+          margin: 0;
+          padding: 0 24px;
+          background: #f1c957;
+          width: 280px;
+          font-size: 24px;
+
+          &:focus {
+              outline: none;
+          }
+      }
+
+      ::placeholder {
+          color: #384045;
+          font-size: 20px;
+          font-weight: 900;
+          font-family: $font-1;
+      }
+  }
+}

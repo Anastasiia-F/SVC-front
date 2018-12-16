@@ -1,0 +1,9 @@
+<div fxLayout class="container">
+  <div *ngFor="let tab of tabs" fxFlex class="result-tab" fxLayout fxLayoutAlign="center center" (click)="tabChange()">
+    <fa-icon [icon]="['fas', tab.icon]"></fa-icon>
+    <strong class="ml-8">{{tab.name}}</strong>
+  </div>
+</div>
+<div>
+  <app-result-summary></app-result-summary>
+</div>

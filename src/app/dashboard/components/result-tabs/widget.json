@@ -1,0 +1,36 @@
+{
+  "tabs": [
+    {
+      "name": "Summary",
+      "icon": "car-alt"
+    },
+    {
+      "name": "Alerts",
+      "icon": "exclamation-triangle"
+    },
+    {
+      "name": "Check Results",
+      "icon": "clipboard-check"
+    },
+    {
+      "name": "Spec",
+      "icon": "clipboard-list"
+    },
+    {
+      "name": "Economy",
+      "icon": "gas-pump"
+    },
+    {
+      "name": "Valuation",
+      "icon": "dollar-sign"
+    },
+    {
+      "name": "MOT History",
+      "icon": "wrench"
+    },
+    {
+      "name": "Mileage",
+      "icon": "tachometer-alt"
+    }
+  ]
+}

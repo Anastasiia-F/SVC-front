@@ -27,7 +27,7 @@ gulp.task('pack-css', () => {
 });
 
 gulp.task('pack-index-html', () => {
-  return gulp.src([`${src}/index.html`])
+  return gulp.src([`${src}/*.html`])
     // .pipe(dom((document) => {
     //   document.querySelectorAll('html')[0].setAttribute('lang', value);
     //   document.getElementById('apiPreconnect').setAttribute('href', apiEnv[env]);
@@ -45,7 +45,7 @@ gulp.task('gzip', gulp.series('pack-js', 'pack-css', 'pack-index-html', () => {
 
 gulp.task('clean', gulp.series('gzip', () => {
   return gulp.src([`${src}/*.js`, `${src}/*.css`, `${src}/*.html`], {read: false})
-    // .pipe(clean());
+    .pipe(clean());
 }));
 
-gulp.task('default', gulp.parallel('clean'));
+gulp.task('default', gulp.series('pack-js', 'pack-css', 'pack-index-html'));
