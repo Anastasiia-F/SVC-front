@@ -1,0 +1,49 @@
+.payment-by-card {
+  width: 100%;
+  button {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      color: #ffffff;
+      background: #10cf6c;
+      border: none;
+      cursor: pointer;
+      padding: 12px;
+      &:focus {
+          outline: none !important;
+      }
+  }
+
+  input[type='text'], input[type='email'], input[type='number'] {
+      border: none;
+      padding: none;
+      margin: 16px 0;
+      background: #ececec;
+      width: 95%;
+      font-size: 18px;
+      padding: 8px;
+      border-radius: 2px;
+      display: block;
+
+      &:focus {
+          outline: none;
+      }
+  }
+
+  .input-invalid {
+      border: 1px solid #ff8e8c !important;
+  }
+
+  .form-border {
+      padding: 14px;
+      border-bottom: 2px solid #ececec;
+      margin-bottom: 24px;
+  }
+
+  .width-49 {
+    width: 49%;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+}

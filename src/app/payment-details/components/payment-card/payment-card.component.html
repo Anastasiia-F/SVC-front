@@ -1,23 +1,23 @@
-<div fxFlex>
+<div class="payment-by-card">
   <div class="cl-purple fs-22 font-secondary py-36">Pay using card</div>
 
   <form [formGroup]="paymentForm" (ngSubmit)="onPaymentSubmit()">
 
-    <div fxLayout="row wrap" fxLayoutAlign="space-between start">
-      <div fxFlex="49">
+    <div class="flex-wrap space-between-start">
+      <div class="width-49">
         <input name="name" type="text" formControlName="name" placeholder="Name" [ngClass]="{'input-invalid': submitted && name.errors?.required}">
       </div>
 
-      <div fxFlex="49">
+      <div class="width-49">
         <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
       </div>
 
-      <div fxFlex="49">
+      <div class="width-49">
         <label class="cl-secondary">Card or debit card</label>
         <input name="creditCard" type="number" formControlName="creditCard" placeholder="Card" [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}">
       </div>
 
-      <div fxFlex="49">
+      <div class="width-49">
         <label class="cl-secondary">We will send a link to the report to:</label>
         <input name="email" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
       </div>
@@ -25,21 +25,21 @@
 
     <div class="my-24 fs-18 cl-secondary">+ (Optional) Have a referral code?</div>
 
-    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
-      <input id="receiveInfo" type="checkbox" formControlName="receiveInfo">
+    <div class="flex-row start-center">
+      <input id="receiveInfo" type="checkbox" formControlName="receiveInfo" class="mr-8">
       <label for="receiveInfo">Tick the box if you want to receive discounts, offers, news and important motoring information</label>
     </div>
 
-    <div fxLayout fxLayoutAlign="start center" fxLayoutGap="8px">
-      <input id="agreePolicies" type="checkbox" formControlName="agreePolicies">
+    <div class="flex-row start-center">
+      <input id="agreePolicies" type="checkbox" formControlName="agreePolicies" class="mr-8">
       <label for="agreePolicies">I agree to the <strong class="cl-secondary fs-16 fw-700">Terms & Conditions, Cookie, Privacy</strong> policies</label>
     </div>
 
     <div class="form-border"></div>
 
-    <div fxLayout fxLayoutAlign="space-between center">
+    <div class="flex-row space-between-center">
       <div>$28.90</div>
-      <button type="submit" fxLayout fxLayoutAlign="start center">
+      <button type="submit" class="flex-row start-center">
         <span class="mr-16 fs-16">Pay Now</span>
         <fa-icon [icon]="['fas', 'angle-right']"></fa-icon>
       </button>

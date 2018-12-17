@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import * as widget from './widget.json';
 
 @Component({
@@ -9,11 +9,18 @@ import * as widget from './widget.json';
 export class SiteBenefitsComponent implements OnInit {
 
   centerContent: any;
+  windowSize: string;
 
   constructor() { }
 
   ngOnInit() {
     this.centerContent = widget['data'];
+    this.windowSize = (window.innerWidth < 960) ? 'lt-md' : 'gt-md';
+  }
+
+  @HostListener('window:resize')
+  public onWindowResize(): void {
+    this.windowSize = (window.innerWidth < 960) ? 'lt-md' : 'gt-md';
   }
 
 }

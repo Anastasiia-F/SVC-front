@@ -1,4 +1,4 @@
-<div class="svc-login" fxLayout fxLayoutAlign="center center">
+<div class="svc-login flex-row center-center">
     <form [formGroup]="form" (ngSubmit)="login()">
       <div class="mb-36">
         <input name="email" formControlName="email" type="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors}">

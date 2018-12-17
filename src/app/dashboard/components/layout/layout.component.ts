@@ -17,6 +17,7 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
     this.reports.getAllReports().subscribe(res => {
       this.allReports = res || [];
+      console.log(this.allReports);
     })
   }
 

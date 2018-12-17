@@ -1,33 +1,33 @@
 <div class="svc-plans-features">
-  <div class="svc-plan-titles text-center fs-20 py-16" fxLayout>
-    <div fxFlex="34" fxFlex.lt-md="20"></div>
-    <div fxFlex>
-      <div fxFlex>Multicheck</div>
-      <div fxFlex>SV Check</div>
-      <div fxFlex>Basic Check</div>
-    </div>
-  </div>
-  <div>
-    <div *ngFor="let item of features; let i=index;" fxLayout class="table-row">
-      <div fxFlex="34" fxFlex.lt-md="20" fxLayout fxLayoutAlign="start center" class="pr-40">
-        <div fxFlex="75" fxLayout fxLayoutAlign="start center" fxLayoutGap="20px">
-          <img width="23" [src]="item.icon" alt="" fxShow fxHide.lt-md>
-          <span class="text-left">{{item.name}}</span>
-        </div>
-        <fa-icon class="cl-secondary" [icon]="['fas', 'plus']" fxShow fxHide.lt-md></fa-icon>
-      </div>
-      <div fxFlex>
-        <div fxFlex fxLayout fxLayoutAlign="center center">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Multicheck</th>
+        <th>SV Check</th>
+        <th>Basic Check</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of features; let i=index;" class="table-row">
+        <td class="flex-row start-center">
+          <div class="col-title">
+            <img width="23" [src]="item.icon" alt="">
+            <span class="text-left">{{item.name}}</span>
+          </div>
+          <fa-icon class="cl-secondary" [icon]="['fas', 'plus']"></fa-icon>
+        </td>
+        <td>
           <fa-icon class="feature-supported" [icon]="['fas', 'check']"></fa-icon>
-        </div>
-        <div fxFlex fxLayout fxLayoutAlign="center center">
+        </td>
+        <td>
           <fa-icon class="feature-supported" [icon]="['fas', 'check']"></fa-icon>
-        </div>
-        <div fxFlex fxLayout fxLayoutAlign="center center">
+        </td>
+        <td>
           <fa-icon *ngIf="isSupported(i)" class="feature-supported" [icon]="['fas', 'check']"></fa-icon>
           <fa-icon *ngIf="!isSupported(i)" class="feature-unsupported" [icon]="['fas', 'times']"></fa-icon>
-        </div>
-      </div>
-    </div>
-  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -1,15 +1,53 @@
+@import '../../../../styles/variables';
+
 .svc-plans-features {
-    .table-row {
-        padding: 16px;
-        color: #555;
-        &:nth-of-type(2n+1) {
-            background: #ececec;
+  table {
+    width: 100%;
+
+    thead tr{
+      font-size: 20px;
+      th {
+        font-weight: 300 !important;
+        padding: 16px 0;
+      }
+    }
+
+    tbody tr td:first-of-type fa-icon {
+      @media #{$medium-and-down} {
+        display: none;
+      }
+    }
+  }
+  .table-row {
+    td {
+      padding: 16px;
+      color: #555;
+      text-align: center;
+    }
+    &:nth-of-type(2n+1) {
+      background: #ececec;
+    }
+
+    .col-title {
+      width: 75%;
+      text-align: left !important;
+
+      @media #{$medium-and-down} {
+        width: unset;
+        img {
+          display: none;
         }
+      }
+
+      img {
+        margin-right: 24px;
+      }
     }
-    .feature-supported {
-        color: green;
-    }
-    .feature-unsupported {
-        color: red;
-    }
+  }
+  .feature-supported {
+      color: green;
+  }
+  .feature-unsupported {
+      color: red;
+  }
 }

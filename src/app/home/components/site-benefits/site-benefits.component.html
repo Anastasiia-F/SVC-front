@@ -1,8 +1,8 @@
-<div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
-        
-  <div *ngFor="let item of centerContent" fxFlex="28" fxFlex.lt-md="100" [ngClass.lt-md]="{'mb-12': true}">
-    <div fxShow fxHide.lt-md>
-      <img [src]="item.icon">
+<div class="svc-home-center-container container">
+
+  <div *ngFor="let item of centerContent" class="content-item">
+    <div *ngIf="windowSize == 'gt-md'">
+      <img [src]="item.icon" alt="">
     </div>
 
     <h2>{{item.title}}</h2>

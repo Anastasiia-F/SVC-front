@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
-// import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -35,8 +33,6 @@ library.add(
     FontAwesomeModule
   ],
   exports: [
-    FlexLayoutModule,
-    // FlexLayoutServerModule,
     FormsModule,
     FontAwesomeModule,
     RouterModule

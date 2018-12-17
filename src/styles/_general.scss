@@ -22,7 +22,7 @@ p {
     margin: 0;
 }
 
-a { 
+a {
     text-decoration: none;
     color: unset;
     &:hover {
@@ -33,6 +33,7 @@ a {
 .container {
     max-width: 1300px;
     margin: 0 auto;
+    padding: 0 20px;
 
     @media #{$large-and-down} {
         max-width: 1000px;

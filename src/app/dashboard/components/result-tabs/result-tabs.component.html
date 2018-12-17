@@ -1,5 +1,5 @@
-<div fxLayout class="container">
-  <div *ngFor="let tab of tabs" fxFlex class="result-tab" fxLayout fxLayoutAlign="center center" (click)="tabChange()">
+<div class="flex-row container">
+  <div *ngFor="let tab of tabs" class="result-tab flex-row center-center" (click)="tabChange(tab)" [ngClass]='{"result-tab-selected": tab["name"] == selectedTab}'>
     <fa-icon [icon]="['fas', tab.icon]"></fa-icon>
     <strong class="ml-8">{{tab.name}}</strong>
   </div>

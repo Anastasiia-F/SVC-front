@@ -1,3 +1,27 @@
 .payment-tab-content {
     padding-bottom: 400px;
+
+    >div {
+      div:first-of-type {
+        width: 63%;
+      }
+
+      div:last-of-type {
+        width: 30%;
+      }
+    }
+
+    @media (max-width: 960px) {
+      >div {
+        flex-direction: column !important;
+
+        div:first-of-type {
+          width: unset !important;
+        }
+
+        div:last-of-type {
+          width: unset !important;
+        }
+      }
+    }
 }

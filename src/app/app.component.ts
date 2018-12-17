@@ -12,9 +12,9 @@ import { Component } from '@angular/core';
     color = "#fff"
     type = "ball-spin-clockwise-fade"
   ></ngx-spinner>
-  <notifier-container></notifier-container>  
+  <notifier-container></notifier-container>
   `
 })
 export class AppComponent {
-  title = 'vsh-frontend';
+  title = 'SVC';
 }

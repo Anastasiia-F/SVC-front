@@ -2,6 +2,61 @@
     cursor: pointer;
 }
 
+.flex-row {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.flex-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.start-start {
+  justify-content: start !important;
+  align-items: start !important;
+}
+
+.start-center {
+  justify-content: start !important;
+  align-items: center !important;
+}
+
+.start-end {
+  justify-content: start !important;
+  align-items: end !important;
+}
+
+.center-center {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.space-between-center {
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.space-between-start {
+  justify-content: space-between !important;
+  align-items:  start !important;
+}
+
+.space-between-stretch {
+  justify-content: space-between !important;
+  align-items:  stretch !important;
+}
+
+.start-stretch {
+  align-items: stretch !important;
+  justify-content: start !important;
+}
+
 .text-center {
     text-align: center;
 }
@@ -19,7 +74,7 @@
     @for $i from 0 through 24 {
 
         $value: $i * 2;
-      
+
         .p-#{$value} {
             padding: #{$value}px !important;
         }
@@ -83,7 +138,7 @@
     @for $i from 6 through 24 {
 
         $value: $i * 2;
-      
+
         .fs-#{$value} {
             font-size: #{$value}px !important;
         }
@@ -95,7 +150,7 @@
     @for $i from 1 through 9 {
 
         $value: $i * 100;
-      
+
         .fw-#{$value} {
             font-weight: #{$value}px !important;
         }

@@ -1,20 +1,31 @@
 @import '../../../../styles/_variables';
 
 .svc-home-center-container {
-            
+
     box-shadow: 1px 1px 48px 40px #00000005;
     padding: 64px;
-    
+
     background: #fff;
 
     display: flex;
     flex-direction: row;
     max-height: 100%;
-    place-content: center;
-    align-items: center;
+    place-content: space-between;
+    align-items: start;
 
     @media #{$medium-and-down} {
         flex-direction: column !important;
+        align-items: start;
+
+        .content-item {
+          max-width: 100% !important;
+          margin-bottom: 12px;
+        }
+    }
+
+    .content-item {
+      max-width: 28%;
+      min-width: 28%;
     }
 
     .svc-home-center-content {

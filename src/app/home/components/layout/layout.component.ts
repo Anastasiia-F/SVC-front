@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
@@ -13,10 +12,12 @@ export class LayoutComponent implements OnInit {
   centerContent: any;
 
   constructor(
-    private router: Router
   ) { }
 
   ngOnInit() {
+    // if (this.auth.isLoggedIn) {
+    //   this.router.navigate(['main']);
+    // }
   }
 
 }

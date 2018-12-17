@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopCheckComponent implements OnInit {
 
+  svcReg: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   search() {
-    
+
   }
 
 }

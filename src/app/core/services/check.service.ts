@@ -16,6 +16,10 @@ export class CheckService {
     return this.http.get(`/svc/full/${registration}`);
   }
 
+  getDataByPackageWithVrm( pack: string, vrm: string) :any {
+    return this.http.get(`/svc/${pack}/${vrm}`);
+  }
+
   getSummary() {
     if (this.searchedData) {
       return {

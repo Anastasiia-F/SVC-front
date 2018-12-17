@@ -5,41 +5,107 @@
     font-family: $font-1;
 
     &-searched >div {
-        padding-top: 70px;
-        padding-bottom: 70px;
+      padding-top: 70px;
+      padding-bottom: 70px;
     }
 
     .car-search-again {
-        height: 80px;
+      height: 80px;
 
-        &-country {
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
-            height: 100%;
-            background: #3163b0;
-            color: #ffffff;
-            img {
-                width: 20px;
-            }
+      &-country {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        height: 100%;
+        background: #3163b0;
+        color: #ffffff;
+        img {
+            width: 20px;
         }
+      }
 
-        &-key {
-            height: 100%;
-            padding: 0 36px;
-            background: #f1c957;
-            color: #384045;
-            font-size: 30px;
-            font-weight: 900;
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
-        }
+      &-key {
+        height: 100%;
+        padding: 0 36px;
+        background: #f1c957;
+        color: #384045;
+        font-size: 30px;
+        font-weight: 900;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+      }
     }
 
     &-plans {
-        background: $background;
+      background: $background;
+      margin-right: 24px;
+      width: 66%;
+    }
+
+    &-basic {
+      width: 33%;
+    }
+
+    &-multi {
+      >app-plan {
+        width: 50% !important;
+      }
+      >app-plan:first-of-type {
+        margin-right: 24px;
+      }
     }
 
     .width-100 {
-        width: 100%;
+      width: 100%;
+    }
+
+    @media #{$medium-and-down} {
+      &-searched > div:first-of-type {
+        flex-direction: column !important;
+      }
+
+      .car-search-again {
+        display: none;
+      }
+
+      .car-searched {
+        flex-direction: column !important;
+        justify-content: center !important;
+
+        > div:first-of-type {
+          margin-right: 0 !important;
+          margin-bottom: 36px;
+        }
+      }
+
+      &-basic {
+        width: 100% !important;
+      }
+
+      &-multi {
+        flex-direction: column !important;
+        align-items: center;
+        >app-plan {
+          width: 100% !important;
+        }
+        >app-plan:first-of-type {
+          margin-right: 0 !important;
+          margin-bottom: 24px;
+        }
+      }
+
+      .plans-container {
+        flex-direction: column !important;
+        > div:first-of-type {
+          margin-bottom: 24px;
+          margin-right: 0 !important;
+          width: 100% !important;
+        }
+      }
+
+      .svc-report-plan {
+        h2 {
+          text-align: center;
+        }
+      }
     }
 }

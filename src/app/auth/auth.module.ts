@@ -4,10 +4,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
-import { VerifyComponent } from './components/verify/verify.component';
 import { SetPasswordComponent } from './components/set-password/set-password.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-
 const routes = [
   {
     path: 'login',
@@ -20,17 +18,12 @@ const routes = [
   {
     path: 'reset-password',
     component: ResetPasswordComponent
-  },
-  {
-    path: 'verfiy',
-    component: VerifyComponent
   }
 ];
 
 @NgModule({
   declarations: [
     LoginComponent,
-    VerifyComponent,
     SetPasswordComponent,
     ResetPasswordComponent
   ],

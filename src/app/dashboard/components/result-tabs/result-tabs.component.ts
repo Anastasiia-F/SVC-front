@@ -21,6 +21,7 @@ import * as data from './widget.json';
 export class ResultTabsComponent implements OnInit {
 
   tabs = [];
+  selectedTab: string;
 
   constructor() { }
 
@@ -37,6 +38,11 @@ export class ResultTabsComponent implements OnInit {
     );
 
     this.tabs = data['tabs'] || [];
+    this.selectedTab = this.tabs[0]['name'];
+  }
+
+  tabChange(tab: Object) {
+    this.selectedTab = tab['name'];
   }
 
 }

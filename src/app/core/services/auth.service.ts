@@ -8,7 +8,7 @@ import { Login } from '../models/login';
 })
 export class AuthService {
 
-    loggedIn: boolean;
+    loggedIn = false;
 
     url = '/auth';
     constructor(private http: HttpClient) {}

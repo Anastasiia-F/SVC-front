@@ -48,4 +48,5 @@ gulp.task('clean', gulp.series('gzip', () => {
     .pipe(clean());
 }));
 
-gulp.task('default', gulp.series('pack-js', 'pack-css', 'pack-index-html'));
+// gulp.task('default', gulp.series('pack-js', 'pack-css', 'pack-index-html'));
+gulp.task('default', gulp.series('clean'));
