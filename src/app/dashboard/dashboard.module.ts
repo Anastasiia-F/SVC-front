@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ReportsService } from './services/reports.service';
+import { ReportsService } from '../core/services/reports.service';
 import { LayoutComponent } from './components/layout/layout.component';
 
 const routes = [

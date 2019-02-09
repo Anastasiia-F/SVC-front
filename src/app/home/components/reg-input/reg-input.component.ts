@@ -22,9 +22,10 @@ export class RegInputComponent implements OnInit {
   }
 
   search() {
-    this.check.vdiFullCheck(this.svcReg).subscribe(res => {
+    this.check.vdiFullCheck(this.svcReg)
+        .subscribe(res => {
       if (res.msg !== 'Success') {
-        this.notifier.notify('error', 'Service is not available.')
+        this.notifier.notify('error', 'Service is not available.');
         return;
       }
       this.check.searchedData = res.data;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReportsService } from '../../services/reports.service';
+import { ReportsService } from '../../../core/services/reports.service';
 
 @Component({
   selector: 'app-layout',

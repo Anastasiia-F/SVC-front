@@ -12,8 +12,8 @@ export class CheckService {
     private http: HttpClient
   ) { }
 
-  vdiFullCheck( registration: string ) : any {
-    return this.http.get(`/svc/full/${registration}`);
+  vdiFullCheck( reg_number: string ) : any {
+    return this.http.get(`/svc/full/${reg_number}`);
   }
 
   getSummary() {
