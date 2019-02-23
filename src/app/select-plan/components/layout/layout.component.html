@@ -5,13 +5,13 @@
         <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column">
             <div class="car-searched" fxLayout fxLayoutAlign="start center" fxLayoutGap="36px" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
                 <div>
-                    <div class="fs-20 cl-secondary mb-12"><strong>{{carData.make}} </strong>{{carData.model}}</div>
+                    <div class="fs-20 cl-secondary mb-12"><strong>{{ carDataSummary$['make'] }} </strong>{{carDataSummary$['model'] }}</div>
                     <div class="fs-20 text-center">
                         <span class="mr-36">
-                            Color: <strong>{{carData.colour}}</strong>
+                            Color: <strong>{{carDataSummary$['colour']}}</strong>
                         </span>
                         <span>
-                            Year: {{carData.year}}
+                            Year: {{carDataSummary$['year']}}
                         </span>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="car-search-again-key" fxLayout fxLayoutAlign="center center">
-                        <span>{{carData.vrm}}</span>
+                        <span>{{carDataSummary$['vrm']}}</span>
                     </div>
                 </div>
 

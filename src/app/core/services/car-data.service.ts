@@ -33,7 +33,7 @@ export class CarDataService {
 
     fetchData (reg_number: String): Promise<Object> {
         return new Promise((resolve, reject) => {
-            this.http.get(`/svc/full/${reg_number}`)
+            let observer = this.http.get(`/svc/full/${reg_number}`)
                 .subscribe(res => {
                     if(res['msg'] === 'Success') {
                         this.carData = res['data'];

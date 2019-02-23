@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CarDataService } from '../../../core/services/car-data.service';
+import {Store} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {CarDataSummary} from "../../../state/car-data.interface";
 
 @Component({
   selector: 'app-summary',
@@ -11,15 +14,19 @@ export class SummaryComponent implements OnInit {
   @Input()
   plan: string;
 
-  summary: any;
+  summary$: Observable<CarDataSummary>;
 
   constructor(
-    private carData: CarDataService
-  ) { }
+      private store: Store<{carData: Observable<CarDataSummary>}>
+  ) {
+    store.select('carData').subscribe((store) => {
+      this.summary$ = store;
+    })
+  }
 
   ngOnInit() {
     this.plan = this.plan.replace('-', ' ');
-    this.summary = this.carData.getSummaryData();
+    console.log(this.plan);
   }
 
 }

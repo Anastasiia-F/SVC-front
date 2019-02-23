@@ -73,3 +73,12 @@ $large-and-down: 'only screen and (max-width : #{$large-screen})' !default;
 $medium-only: 'only screen and (min-width : #{$small-screen}) and (max-width : #{$medium-screen})' !default;
 $medium-and-large: 'only screen and (min-width : #{$small-screen}) and (max-width : #{$large-screen})' !default;
 $large-only: 'only screen and (min-width : #{$medium-screen}) and (max-width : #{$large-screen})' !default;
+
+
+
+/*
+ ** Sizes
+ */
+
+$header-height: 80px;
+$footer-height: 203px;
