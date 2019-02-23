@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CheckService } from '../../../core/services/check.service';
+import { CarDataService } from '../../../core/services/car-data.service';
 
 @Component({
   selector: 'app-layout',
@@ -13,17 +13,18 @@ export class LayoutComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private check: CheckService
+    private carDataService: CarDataService
   ) { }
 
   ngOnInit() {
-    this.check.searchedData = JSON.parse(localStorage.getItem('car'));
+    /*this.check.searchedData = JSON.parse(localStorage.getItem('car'));
     if (!this.check.searchedData) {
       this.router.navigate(['/']);
       return;
-    }
+    }*/
 
-    this.carData = this.check.getSummary();
+    this.carData = this.carDataService.getSummaryData();
+
   }
 
   selectPlan(plan) {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotifierService } from 'angular-notifier';
-import { CheckService } from '../../../core/services/check.service';
+import { CarDataService } from '../../../core/services/car-data.service';
 
 @Component({
   selector: 'app-reg-input',
@@ -14,24 +14,37 @@ export class RegInputComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private check: CheckService,
-    private notifier: NotifierService
+    private notifier: NotifierService,
+    private carData: CarDataService,
+
   ) { }
 
   ngOnInit() {
   }
 
   search() {
-    this.check.vdiFullCheck(this.svcReg)
+    this.carData.fetchData(this.svcReg).then(
+        response => {
+          if(response === 'Success') {
+            this.router.navigate(['/plans']);
+            return;
+          }
+          this.notifier.notify('error', 'Service is not available.');
+        }
+    );
+
+
+    /*this.check.vdiFullCheck(this.svcReg)
         .subscribe(res => {
       if (res.msg !== 'Success') {
         this.notifier.notify('error', 'Service is not available.');
         return;
       }
       this.check.searchedData = res.data;
-      localStorage.setItem('car', JSON.stringify(res.data));
+      // localStorage.setItem('car', JSON.stringify());
+      this.carData.setData(res.data);
       this.router.navigate(['/plans']);
-    });
+    });*/
   }
 
 }

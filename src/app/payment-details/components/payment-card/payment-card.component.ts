@@ -51,14 +51,14 @@ export class PaymentCardComponent implements OnInit {
 
     const user: User = this.paymentForm.value;
     const credit: Credit = {
-        creditType: this.plan === 'Basic Check' ? 'Basic' : 'Full',
+        creditType: this.plan === 'basicCheck' ? 'Basic' : 'Full',
         generateReport: true,
         hasReport: true
     };
 
     user.credits = [];
 
-    if (this.plan !== 'Multicheck') {
+    if (this.plan !== 'multicheck') {
       user.credits.push(credit);
     } else {
       for (let i of [0, 1, 2]) {

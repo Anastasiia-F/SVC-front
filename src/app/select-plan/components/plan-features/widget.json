@@ -24,14 +24,17 @@
         ],
         "plans": [
             {
+                "type":"multicheck", 
                 "title": "Multicheck",
                 "not_supported": []
             },
             {
+                "type": "SVCheck",
                 "title": "SV Check",
                 "not_supported": []
             },
             {
+                "type": "basicCheck",
                 "title": "Basic Check",
                 "not_supported": [1, 6, 7, 13]
             }

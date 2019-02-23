@@ -19,7 +19,7 @@ export class PlanFeaturesComponent implements OnInit {
   }
 
   isSupported (index) {
-    const basic = this.widget.plans.find(p => p.title === 'Basic Check');
+    const basic = this.widget.plans.find(p => p.type === 'basicCheck');
     return basic.not_supported.indexOf(index) > -1 ;
   }
 

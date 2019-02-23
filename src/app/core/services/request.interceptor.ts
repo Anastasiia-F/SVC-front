@@ -60,7 +60,7 @@ export class RequestInterceptor implements HttpInterceptor {
                   this.spinner.hide();
                 }
               }, (err: any) => {
-                console.log(err);
+                console.error(err);
                 this.notifier.notify('error', err.error.msg);
                 this.spinner.hide();
               })

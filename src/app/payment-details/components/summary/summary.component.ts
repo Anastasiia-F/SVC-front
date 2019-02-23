@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CheckService } from '../../../core/services/check.service';
+import { CarDataService } from '../../../core/services/car-data.service';
 
 @Component({
   selector: 'app-summary',
@@ -14,12 +14,12 @@ export class SummaryComponent implements OnInit {
   summary: any;
 
   constructor(
-    private check: CheckService
+    private carData: CarDataService
   ) { }
 
   ngOnInit() {
     this.plan = this.plan.replace('-', ' ');
-    this.summary = this.check.getSummary();
+    this.summary = this.carData.getSummaryData();
   }
 
 }
