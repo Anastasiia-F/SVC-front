@@ -23,7 +23,8 @@ export class CheckService {
         year: this.searchedData['YearOfManufacture'],
         model: this.searchedData['Model'],
         vrm: this.searchedData['Vrm'],
-        make: this.searchedData['Make']
+        make: this.searchedData['Make'],
+        img: this.searchedData['img']
       }
     }
   }
