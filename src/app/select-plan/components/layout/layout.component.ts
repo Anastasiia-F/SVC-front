@@ -25,17 +25,7 @@ export class LayoutComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-    /*this.check.searchedData = JSON.parse(localStorage.getItem('car'));
-    if (!this.check.searchedData) {
-      this.router.navigate(['/']);
-      return;
-    }*/
-
-
-    // this.carData = this.carDataService.getSummaryData();
-
-  }
+  ngOnInit() {}
 
   selectPlan(plan) {
     this.router.navigate(['/payment-details'],  { queryParams: { plan: plan } });

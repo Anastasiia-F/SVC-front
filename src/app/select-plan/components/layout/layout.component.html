@@ -5,7 +5,7 @@
         <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.lt-md="column">
             <div class="car-searched" fxLayout fxLayoutAlign="start center" fxLayoutGap="36px" fxLayout.lt-md="column" fxLayoutAlign.lt-md="center center">
                 <div>
-                    <div class="fs-20 cl-secondary mb-12"><strong>{{ carDataSummary$['make'] }} </strong>{{carDataSummary$['model'] }}</div>
+                    <div class="fs-20 cl-secondary mb-12"><strong>{{ carDataSummary$['make'] }} </strong> {{ carDataSummary$['model'] }}</div>
                     <div class="fs-20 text-center">
                         <span class="mr-36">
                             Color: <strong>{{carDataSummary$['colour']}}</strong>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div>
-                    <img width="200" src="assets/images/car-example.png" alt="">
+                    <img width="200" [src]="carDataSummary$['img']" alt="">
                 </div>
             </div>
 

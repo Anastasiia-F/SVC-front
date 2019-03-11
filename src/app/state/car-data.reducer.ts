@@ -1,13 +1,15 @@
 import * as ActionsData from './car-data.actions';
 import { ActionTypes } from './car-data.actions';
 import {CarDataSummary} from "./car-data.interface";
+import {Observable} from "rxjs";
 
-export const  initialState: CarDataSummary = {
+export const  initialState: CarDataSummary  = {
     make: '',
     model: '',
     colour: '',
     year: '',
-    vrm: ''
+    vrm: '',
+    img: ''
 };
 
 export function carDataReducer (state =  initialState, action: ActionsData.ActionsUnion) {
@@ -18,7 +20,6 @@ export function carDataReducer (state =  initialState, action: ActionsData.Actio
             return state;
         }
         case ActionTypes.FetchSummaryError: {
-            console.log(action.payload);
             return;
         }
         case ActionTypes.GetSummary: {

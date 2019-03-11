@@ -3,5 +3,6 @@ export interface CarDataSummary {
     model: String
     colour: String
     year: String
-    vrm: String
+    vrm: String,
+    img: String
 }
