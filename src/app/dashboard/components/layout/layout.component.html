@@ -1,3 +1,72 @@
-<p>
-  {{allReports}}
-</p>
+<div fxLayout="row"
+     fxLayoutAlign="space-between"
+     class="container">
+  <a [routerLink]="['/main']"
+     routerLinkActive="tabs-button-active"
+     [routerLinkActiveOptions]="{exact: true}"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'car']"></fa-icon>
+    <span class="tab-text">Summary</span>
+  </a>
+  <a [routerLink]="['/main/alerts']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'exclamation-triangle']"></fa-icon>
+    <span class="tab-text">Alerts</span>
+  </a>
+  <a [routerLink]="['/main/check-results']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'clipboard-check']"></fa-icon>
+    <span class="tab-text">Check Results</span>
+  </a>
+  <a [routerLink]="['/main/spec']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'clipboard-list']"></fa-icon>
+    <span class="tab-text">Spec</span>
+  </a>
+  <a [routerLink]="['/main/economy']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'gas-pump']"></fa-icon>
+    <span class="tab-text">Economy</span>
+  </a>
+  <a [routerLink]="['/main/valuation']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'dollar-sign']"></fa-icon>
+    <span class="tab-text">Valuation</span>
+  </a>
+  <a [routerLink]="['/main/mot-history']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'wrench']"></fa-icon>
+    <span class="tab-text">MOT History</span>
+  </a>
+  <a [routerLink]="['/main/mileage']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'tachometer-alt']"></fa-icon>
+    <span class="tab-text">Mileage</span>
+  </a>
+</div>
+<div class="tabs-content">
+  <router-outlet></router-outlet>
+</div>

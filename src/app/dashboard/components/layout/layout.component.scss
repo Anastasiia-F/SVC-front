@@ -1,0 +1,37 @@
+@import "../../../../styles/variables";
+
+.tabs-button {
+  border-radius: 2px 2px 0 0;
+  font-family: $font-2;
+  font-weight: 700;
+  color: $secondary;
+  font-size: 15px;
+  height: 55px;
+  padding: 0 15px;
+  white-space: nowrap;
+
+  &-active {
+    background-color: $secondary;
+    color: #ffffff;
+  }
+
+  .tab-text {
+    margin-left: 10px;
+  }
+}
+
+.tabs-content {
+  padding-top: 50px;
+}
+
+.tabs-content::ng-deep {
+  .image-block {
+    padding: 48px 55px;
+    background-color: #f4f4f4;
+    height: 432px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
