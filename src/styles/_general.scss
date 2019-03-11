@@ -10,6 +10,10 @@ html, body {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body, input, button {
     font-family: $font-1;
 }
@@ -32,7 +36,8 @@ a {
 }
 
 .content-wrapper {
-    min-height: calc(100% - #{$header-height} - #{$footer-height});
+    background-color: #fff;
+    min-height: $content-min-height;
 }
 
 .container {
@@ -86,4 +91,20 @@ a {
 
 .font-secondary {
     font-family: $font-2 !important;
+}
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+textarea:-internal-autofill-previewed,
+textarea:-internal-autofill-selected,
+select:-internal-autofill-previewed,
+select:-internal-autofill-selected  {
+  background: none !important;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+.d-inline-block-im {
+    display: inline-block !important;
 }

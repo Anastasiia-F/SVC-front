@@ -104,3 +104,24 @@
 
 @include padding-margin-global-styles();
 @include font-size-global-styles();
+
+.striped-table {
+    border-collapse: collapse;
+    width: 100%;
+
+    .table-row {
+        &:nth-child(even) {
+            background: #ececec;
+        }
+        td {
+            padding: 16px;
+            color: #555;
+        }
+    }
+    .feature-supported {
+        color: green;
+    }
+    .feature-unsupported {
+        color: red;
+    }
+}

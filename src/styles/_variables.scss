@@ -82,3 +82,4 @@ $large-only: 'only screen and (min-width : #{$medium-screen}) and (max-width : #
 
 $header-height: 80px;
 $footer-height: 203px;
+$content-min-height: calc(100% - #{$header-height} - #{$footer-height})
