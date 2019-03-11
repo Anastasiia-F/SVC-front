@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {StripeTableComponent} from "../../../shared/stripe-table/stripe-table.component";
 
 @Component({
   selector: 'app-alerts',
