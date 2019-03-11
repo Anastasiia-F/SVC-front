@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-// import { FlexLayoutServerModule } from '@angular/flex-layout/server';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -13,7 +12,15 @@ import {
   faCheck,
   faLock,
   faPlus,
-  faTimes
+  faTimes,
+  faCar,
+  faExclamationTriangle,
+  faClipboardCheck,
+  faClipboardList,
+  faGasPump,
+  faDollarSign,
+  faWrench,
+  faTachometerAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
@@ -25,7 +32,15 @@ library.add(
   faCheckCircle,
   faLock,
   faPlus,
-  faTimes
+  faTimes,
+  faCar,
+  faExclamationTriangle,
+  faClipboardCheck,
+  faClipboardList,
+  faGasPump,
+  faDollarSign,
+  faWrench,
+  faTachometerAlt
 );
 
 @NgModule({
@@ -36,7 +51,6 @@ library.add(
   ],
   exports: [
     FlexLayoutModule,
-    // FlexLayoutServerModule,
     FormsModule,
     FontAwesomeModule,
     RouterModule
