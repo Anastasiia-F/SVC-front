@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --live-reload false",
     "build": "ng build",
     "prod": "ng build --prod",
     "swa-prod": "ng build --prod && sw-precache --root=dist --config=precache-config.js && gulp",
