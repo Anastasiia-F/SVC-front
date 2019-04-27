@@ -24,7 +24,7 @@ export class AuthGuard implements CanActivate {
         map(res => {
           if (!res['user']) {
             this.auth.loggedIn = false;
-            this.router.navigate(['/']);
+            this.router.navigate(['/auth/login']);
             return false;
           }
           localStorage.setItem('email', res['user']);

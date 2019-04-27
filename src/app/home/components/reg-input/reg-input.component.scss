@@ -1,7 +1,8 @@
 @import '../../../../styles/variables';
 
 .svc-home-header {
-    padding: 120px 0 360px;
+  background-color: #f4f4f4;
+  padding: 120px 0 360px;
 
     @media #{$medium-and-down} {
 

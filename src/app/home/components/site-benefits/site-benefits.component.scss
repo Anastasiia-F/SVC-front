@@ -2,8 +2,8 @@
 
 .svc-home-center-container {
             
-    box-shadow: 1px 1px 48px 40px #00000005;
-    padding: 64px;
+    box-shadow: 0 13px 38px 6px rgba(36,11,16, .06);
+    padding: 53px 68px 43px;
     
     background: #fff;
 
@@ -17,11 +17,29 @@
         flex-direction: column !important;
     }
 
+    h2 {
+      margin: 0;
+      padding: 7px 0 10px;
+    }
+
+  .svc-home-center-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 42px;
+  }
+
     .svc-home-center-content {
-        font-weight: 700;
+      font-size: 14px;
+      color: #b1b1b1;
+      line-height: 20px;
 
         fa-icon {
             color: #27294f;
         }
     }
+
+  .home-center-list-item {
+    margin-bottom: 4px;
+  }
 }

@@ -17,18 +17,22 @@ export class LayoutComponent implements OnInit {
 
   constructor(
     private router: Router,
-    // private carDataService: CarDataService,
     private store: Store<{carData: Observable<CarDataSummary>}>
   ) {
-    store.select('carData').subscribe((store) => {
+    store.select('carData').subscribe(store => {
       this.carDataSummary$ = store;
     })
   }
 
   ngOnInit() {}
 
-  selectPlan(plan) {
-    this.router.navigate(['/payment-details'],  { queryParams: { plan: plan } });
+  selectPlan(params) {
+    this.router.navigate(['/payment-details'],  {
+      queryParams: {
+        plan: params.plan,
+        price: params.price,
+        vrm: this.carDataSummary$['vrm']
+    } });
   }
 
 }

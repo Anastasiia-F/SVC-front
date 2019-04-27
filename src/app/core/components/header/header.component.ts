@@ -19,11 +19,13 @@ export class HeaderComponent implements OnInit {
 
   signInOrOut() {
     if (this.auth.loggedIn) {
-      this.auth.logout().subscribe(() => {
-        this.auth.loggedIn = false;
-        this.router.navigate(['/']);
-      });
-    } else {
+        this.auth.logout()
+          .subscribe(() => {
+            this.auth.loggedIn = false;
+            this.router.navigate(['/']);
+          });
+    }
+    else {
       this.router.navigate(['/auth/login']);
     }
   }

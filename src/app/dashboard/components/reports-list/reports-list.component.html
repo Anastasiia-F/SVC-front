@@ -1,22 +1,13 @@
 <div class="container">
   <table class="striped-table">
-    <tr class="table-row">
-      <td>Audi TT</td>
-      <td>RF456TG</td>
-      <td>03.12.2019</td>
-      <td class="text-right">detail</td>
-    </tr>
-    <tr class="table-row">
-      <td>Audi TT</td>
-      <td>RF456TG</td>
-      <td>03.12.2019</td>
-      <td class="text-right">detail</td>
-    </tr>
-    <tr class="table-row">
-      <td>Audi TT</td>
-      <td>RF456TG</td>
-      <td>03.12.2019</td>
-      <td class="text-right">detail</td>
+    <tr class="table-row" *ngFor="let report of allReports">
+      <td>{{report.data.Make }}</td>
+      <td>{{ report.data.Model }}</td>
+      <td>{{ report.createdAt | date }}</td>
+      <td class="text-right">
+        <a [routerLink]="['./', report.registration]">Show detail</a>
+      </td>
     </tr>
   </table>
+  <router-outlet></router-outlet>
 </div>

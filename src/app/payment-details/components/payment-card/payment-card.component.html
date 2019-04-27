@@ -7,8 +7,8 @@
       <div fxFlex="49">
         <input name="name" type="text" formControlName="name" placeholder="Name" [ngClass]="{'input-invalid': submitted && name.errors?.required}">
       </div>
-
       <div fxFlex="49">
+        <!--*ngIf="!auth.loggedIn"-->
         <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
       </div>
 
@@ -18,6 +18,7 @@
       </div>
 
       <div fxFlex="49">
+        <!--*ngIf="!auth.loggedIn"-->
         <label class="cl-secondary">We will send a link to the report to:</label>
         <input name="email" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
       </div>
@@ -38,7 +39,7 @@
     <div class="form-border"></div>
 
     <div fxLayout fxLayoutAlign="space-between center">
-      <div>$28.90</div>
+      <div>{{ price }}</div>
       <button type="submit" fxLayout fxLayoutAlign="start center">
         <span class="mr-16 fs-16">Pay Now</span>
         <fa-icon [icon]="['fas', 'angle-right']"></fa-icon>

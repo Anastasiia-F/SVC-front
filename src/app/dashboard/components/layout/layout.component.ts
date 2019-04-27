@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-layout',
@@ -6,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
+
+  vrm: String;
+
+  constructor (
+      private route: ActivatedRoute
+  ) {
+    this.vrm = this.route.snapshot.paramMap.get('vrm');
+  }
 
   ngOnInit() {
   }

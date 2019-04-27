@@ -1,7 +1,8 @@
 <div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
         
   <div *ngFor="let item of centerContent" fxFlex="28" fxFlex.lt-md="100" [ngClass.lt-md]="{'mb-12': true}">
-    <div fxShow fxHide.lt-md>
+    <div class="svc-home-center-icon"
+         fxShow fxHide.lt-md>
       <img [src]="item.icon">
     </div>
 
@@ -10,7 +11,8 @@
     <div class="svc-home-center-content">
 
       <div *ngIf="item.content.type == 'list'">
-        <div *ngFor="let v of item.content.value">
+        <div *ngFor="let v of item.content.value"
+             class="home-center-list-item">
           <fa-icon class="mr-10" [icon]="['fas', 'check']"></fa-icon>{{v}}
         </div>
       </div>

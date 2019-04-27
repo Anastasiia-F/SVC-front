@@ -52,13 +52,19 @@
                     <div class="p-24">
                         <div class="text-center fs-20 mb-20">Protect yourself with a <strong class="cl-secondary">£30,000</strong> Guarantvee</div>
                         <div fxLayout fxLayoutGap="24px" fxLayout.lt-md="column">
-                            <app-plan fxFlex [checkType]="'multicheck'" (selected)="selectPlan($event)"></app-plan>
-                            <app-plan fxFlex [checkType]="'SVCheck'" [mostPopular]="true" (selected)="selectPlan($event)"></app-plan>
+                            <app-plan fxFlex
+                                      [checkType]="'Multicheck'"
+                                      (selected)="selectPlan($event)"></app-plan>
+                            <app-plan fxFlex
+                                      [checkType]="'SV Check'"
+                                      [mostPopular]="true"
+                                      (selected)="selectPlan($event)"></app-plan>
                         </div>
                     </div>
                 </div>
                 <div fxFlex fxFlex.lt-md="false" class="svc-select-plan-basic pt-24" [ngClass.lt-md]="{'width-100': true}">
-                    <app-plan [checkType]="'basicCheck'" (selected)="selectPlan($event)"></app-plan>
+                    <app-plan [checkType]="'Basic Check'"
+                              (selected)="selectPlan($event)"></app-plan>
                 </div>
             </div>
 

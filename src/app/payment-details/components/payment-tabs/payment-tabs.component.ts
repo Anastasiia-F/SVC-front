@@ -10,6 +10,12 @@ export class PaymentTabsComponent implements OnInit {
   @Input()
   plan: string;
 
+  @Input()
+  price: number;
+
+  @Input()
+  vrm: string;
+
   paymentMethod: string;
 
   constructor() { }

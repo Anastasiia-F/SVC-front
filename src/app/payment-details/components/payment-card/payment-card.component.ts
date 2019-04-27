@@ -16,6 +16,12 @@ export class PaymentCardComponent implements OnInit {
   @Input()
   plan: string;
 
+  @Input()
+  price: number;
+
+  @Input()
+  vrm: string;
+
   paymentForm: FormGroup;
   submitted = false;
 
@@ -28,9 +34,9 @@ export class PaymentCardComponent implements OnInit {
   ngOnInit() {
     this.paymentForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-      phone: new FormControl('', [Validators.required]),
+      phone: new FormControl('', []),
       creditCard: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
+      email: new FormControl('', []),
       receiveInfo: new FormControl(false),
       agreePolicies: new FormControl(false)
     });
@@ -50,25 +56,30 @@ export class PaymentCardComponent implements OnInit {
     }
 
     const user: User = this.paymentForm.value;
+
     const credit: Credit = {
-        creditType: this.plan === 'basicCheck' ? 'Basic' : 'Full',
-        generateReport: true,
-        hasReport: true
+        creditType: this.plan === 'Basic Check' ? 'Basic' : 'Full',
+        registration: this.vrm
     };
 
     user.credits = [];
 
-    if (this.plan !== 'multicheck') {
+    if (this.plan !== 'Multicheck') {
       user.credits.push(credit);
-    } else {
+    }
+    else {
       for (let i of [0, 1, 2]) {
+        if(i>0){
+          credit.registration = '';
+        }
         user.credits.push(credit);
       }
     }
 
-    this.auth.signUp(user).subscribe(res => {
-      this.router.navigate(['auth', 'set-password']);
-    });
+    this.auth.signUp(user)
+        .subscribe(res => {
+          this.router.navigate(['auth', 'set-password']);
+        });
   }
 
   get name() {

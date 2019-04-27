@@ -9,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LayoutComponent implements OnInit {
 
   plan: string;
+  price: number;
+  vrm: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -19,7 +21,9 @@ export class LayoutComponent implements OnInit {
 
     this.route.queryParams.subscribe(params => {
 
-      this.plan = params.plan;
+      this.plan = params.plan.replace('-', ' ');
+      this.price = params.price;
+      this.vrm = params.vrm;
     });
   }
 

@@ -17,48 +17,52 @@ import { ReportsListComponent } from './components/reports-list/reports-list.com
 const routes = [{
     path: '',
     component: ReportsListComponent,
+},
+{
+    path:':vrm',
+    component: LayoutComponent,
     children: [
         {
-            path:'report',
-            component: LayoutComponent,
-            children: [
-                {
-                    path: '',
-                    component: SummaryComponent
-                },
-                {
-                    path: 'alerts',
-                    component: AlertsComponent
-                },
-                {
-                    path: 'check-results',
-                    component: CheckResultsComponent
-                },
-                {
-                    path: 'spec',
-                    component: SpecComponent
-                },
-                {
-                    path: 'economy',
-                    component: EconomyComponent
-                },
-                {
-                    path: 'valuation',
-                    component: ValuationComponent
-                },
-                {
-                    path: 'mot-history',
-                    component: MotHistoryComponent
-                },
-                {
-                    path: 'mileage',
-                    component: MileageComponent
-                }
-            ]
-
+            path: '',
+            redirectTo: 'summary',
+            pathMatch: 'full'
+        },
+        {
+            path: 'summary',
+            component: SummaryComponent
+        },
+        {
+            path: 'alerts',
+            component: AlertsComponent
+        },
+        {
+            path: 'check-results',
+            component: CheckResultsComponent
+        },
+        {
+            path: 'spec',
+            component: SpecComponent
+        },
+        {
+            path: 'economy',
+            component: EconomyComponent
+        },
+        {
+            path: 'valuation',
+            component: ValuationComponent
+        },
+        {
+            path: 'mot-history',
+            component: MotHistoryComponent
+        },
+        {
+            path: 'mileage',
+            component: MileageComponent
         }
     ]
-  }
+
+}
+
 ];
 
 @NgModule({

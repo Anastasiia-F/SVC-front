@@ -24,9 +24,6 @@ export class SummaryComponent implements OnInit {
     })
   }
 
-  ngOnInit() {
-    this.plan = this.plan.replace('-', ' ');
-    console.log(this.plan);
-  }
+  ngOnInit() {}
 
 }

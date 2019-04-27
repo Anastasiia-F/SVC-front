@@ -23,19 +23,24 @@ export class PlanComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if (this.checkType === 'multicheck') {
+    if (this.checkType === 'Multicheck') {
       this.carImage = 'assets/images/multi-cars.png';
       this.checkCount = 3;
       this.price = 28.90;
     } else {
       this.carImage = 'assets/images/single-car.png';
       this.checkCount = 1;
-      this.price = this.checkType === 'SVCheck' ? 19.99 : 9.99;
+      this.price = this.checkType === 'SV Check' ? 19.99 : 9.99;
     }
   }
 
   selectPlan() {
-    this.selected.emit(this.checkType);
+    let obj = {
+      plan: this.checkType.replace(' ', '-'),
+      price: this.price
+    };
+
+    this.selected.emit(obj);
   }
 
 }

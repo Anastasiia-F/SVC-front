@@ -1,20 +1,143 @@
 <div class="container">
   <div class="image-block">
-    <div fxflex>
-      <div fxFlex="61%">
-        <img src="https://cdn2.vdicheck.com/VehicleImages/Image.ashx?Id=9EC072EE-6D2B-4F4B-BDCC-3E764727FD7E" alt="">
+    <div fxFlex>
+      <div *ngIf="report" fxFlex="61%">
+        <img [src]="report.img">
       </div>
-      <div>Summary</div>
+      <div *ngIf="report">
+        <div class="car-num">{{report.registration}}</div>
+        <div class="car-name"><span>{{report.data.Make}}</span><span>{{report.data.Model}}</span></div>
+        <div class="car-text">Color:<strong>{{report.data.Colour}}</strong> Year:<strong>{{report.data.DateFirstRegistered}}</strong></div>
+        <div class="car-text-2">Check performed: {{report.createdAt | date }}</div>
+      </div>
     </div>
   </div>
+  <h3>Report summary</h3>
+  <table class="striped-table">
+    <tr class="table-row">
+      <td>Not Recorded Stolen</td>
+      <td>
+        <span *ngIf="!report.data['Stolen']">
+          <fa-icon class="feature-supported"
+                   [icon]="['fas', 'check']"></fa-icon>
+        </span>
+        <span *ngIf="report.data['Stolen']">
+          <fa-icon class="feature-unsupported"
+                   [icon]="['fas', 'times']"></fa-icon>
+        </span>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Not Exported</td>
+      <td>
+        <span *ngIf="!report.data['Exported']">
+          <fa-icon class="feature-supported"
+                   [icon]="['fas', 'check']"></fa-icon>
+        </span>
+        <span *ngIf="report.data['Exported']">
+          <fa-icon class="feature-unsupported"
+                   [icon]="['fas', 'times']"></fa-icon>
+        </span>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>No Plate Changes</td>
+      <td>
+        <span *ngIf="report.data['PlateChangeCount'] == 0">
+          <fa-icon class="feature-supported"
+                   [icon]="['fas', 'check']"></fa-icon>
+        </span>
+        <span *ngIf="report.data['PlateChangeCount'] != 0">
+          <fa-icon class="feature-unsupported"
+                   [icon]="['fas', 'times']"></fa-icon>
+        </span>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Outstanding finance</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>Insurance Write-Off!</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>Fraud Guard: Incomplete!</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>MOT Expiry: 23 / 10 / 2016</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>Past valuations</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>No Owners Before Current</td>
+      <td></td>
+    </tr>
+    <tr class="table-row">
+      <td>Not Scrapped</td>
+      <td>
+        <span *ngIf="!report.data['Scrapped']">
+          <fa-icon class="feature-supported"
+                   [icon]="['fas', 'check']"></fa-icon>
+        </span>
+        <span *ngIf="report.data['Scrapped']">
+          <fa-icon class="feature-unsupported"
+                   [icon]="['fas', 'times']"></fa-icon>
+        </span>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Recalls not checked</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Not Imported</td>
+      <td>
+        <span *ngIf="!report.data['Imported']">
+          <fa-icon class="feature-supported"
+                   [icon]="['fas', 'check']"></fa-icon>
+        </span>
+        <span *ngIf="report.data['Imported']">
+          <fa-icon class="feature-unsupported"
+                   [icon]="['fas', 'times']"></fa-icon>
+        </span>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Finance details</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Insurance write-off details</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Mileage discrepancy!</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Mot history</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Current valuation</td>
+      <td>
+      </td>
+    </tr>
+    <tr class="table-row">
+      <td>Fuel costs</td>
+      <td>
+      </td>
+    </tr>
+  </table>
 </div>
-
-<table class="striped-table">
-  <tr>
-    <td>Summary</td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
 

@@ -11,7 +11,7 @@
     <div class="container" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column">
       <div fxFlex="63" fxFlex.lt-md="false">
         <ng-container *ngIf="paymentMethod == 'card'">
-          <app-payment-card [plan]="plan"></app-payment-card>
+          <app-payment-card [plan]="plan" [price]="price" [vrm]="vrm"></app-payment-card>
         </ng-container>
         <ng-container *ngIf="paymentMethod == 'paypal'">
           <app-payment-paypal></app-payment-paypal>

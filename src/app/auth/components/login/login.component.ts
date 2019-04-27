@@ -39,10 +39,11 @@ export class LoginComponent implements OnInit {
 
     this.submitted = true;
 
-    this.auth.login(this.form.value).subscribe(res => {
-      this.auth.loggedIn = true;
-      this.router.navigate(['/main']);
-    })
+    this.auth.login(this.form.value)
+        .subscribe(res => {
+          this.auth.loggedIn = true;
+          this.router.navigate(['/main']);
+        })
   }
 
 }
