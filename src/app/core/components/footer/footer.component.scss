@@ -3,42 +3,54 @@
 .svc-footer {
     background: #013155;
     height: $footer-height;
-    
-    &-content {
-        padding: 64px 0;
 
-        flex-direction: row;
-        display: flex;
-        place-content: center space-between;
-        align-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
 
-        @media #{$medium-and-down} {
-            flex-direction: column;
-            * {
-                text-align: center !important;
-            }
+    .svc-footer-content {
+      a {
+        color: #fff;
+        display: inline-block;
+        margin-top: 5px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      @media #{$medium-and-down} {
+        flex-direction: column;
+        * {
+          text-align: center !important;
+        }
+      }
+
+      .svc-logo span {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: $font-1;
+        &:first-of-type {
+          font-weight: 700;
+        }
+      }
+
+      &-trade div{
+
+        color: rgba(255, 255, 255, 0.7);
+
+        &:first-of-type {
+          color: #ffffff;
         }
 
-        .svc-logo span {
-            color: #ffffff;
-            font-size: 24px;
-            font-family: $font-1;
-            &:first-of-type {
-                font-weight: 700;
-            }
+        &:last-of-type {
+          color: #549bd1;
         }
-
-        &-trade div{
-
-            color: rgba(255, 255, 255, 0.7);
-
-            &:first-of-type {
-                color: #ffffff;
-            }
-
-            &:last-of-type {
-                color: #549bd1;
-            }
-        }
+      }
     }
+
+  }
+
 }
