@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { Store, select} from "@ngrx/store";
@@ -15,6 +15,8 @@ import {CarDataSummary} from "../../../state/car-data.interface";
 export class RegInputComponent implements OnInit {
 
   svcReg: string;
+
+  @Input() isFooter: boolean;
 
   constructor(
     private router: Router,

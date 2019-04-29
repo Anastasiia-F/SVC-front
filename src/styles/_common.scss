@@ -1,3 +1,5 @@
+@import './variables';
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -125,4 +127,28 @@
     .feature-unsupported {
         color: red;
     }
+}
+
+.svc-icon {
+  font-family: $icons;
+
+  &-stolen:before {
+    content: '\e80A';
+  }
+
+  &-clocked:before {
+    content: '\e61d';
+  }
+
+  &-hidden:before {
+    content: '\e607';
+  }
+
+  &-identity:before {
+    content: '\e61f';
+  }
+
+  &-rightful:before {
+    content: '\e621';
+  }
 }

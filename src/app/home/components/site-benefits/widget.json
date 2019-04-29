@@ -2,31 +2,47 @@
     "data": [
         {
             "icon": "assets/images/guard.png",
-            "title": "What we check",
+            "iconClass": "svc-icon-stolen",
+            "title": "Stolen?",
             "content": {
-                "type": "list",
-                "value": [
-                "Stolen vehicle database check",
-                "Written off vehicle check",
-                "Outstanding finance check",
-                "MOT history check"
-                ]
+                "type": "text",
+                "value": "35 stolen vehicle checks we carry out per day identify the vehicle as being stolen."
             }
         },
         {
             "icon": "assets/images/heart-msg.png",
-            "title": "Customer satisfaction",
+            "iconClass": "svc-icon-clocked",
+            "title": "Correct Mileage?",
             "content": {
                 "type": "text",
-                "value": "With thousands of checks each month and some of the lowest prices, we have some very happy customers. We are always trying to improve the service we offer."
+                "value": "1 in 15 cars we check has incorrect mileage meaning it may have been tampered with."
             }
         },
         {
             "icon": "assets/images/alarm.png",
-            "title": "Quick and easy",
+            "iconClass": "svc-icon-hidden",
+            "title": "A Hidden Past?",
             "content": {
                 "type": "text",
-                "value": "Have your full report delivered to your email within minutes of your order."
+                "value": "The car history check reveals over 353 insurance write-offs on a daily basis."
+            }
+        },
+        {
+            "icon": "assets/images/alarm.png",
+            "iconClass": "svc-icon-identity",
+            "title": "Different Plates?",
+            "content": {
+                "type": "text",
+                "value": "1 in 5 checks show up as the vehicle having had its number plates changed."
+            }
+        },
+        {
+            "icon": "assets/images/alarm.png",
+            "iconClass": "svc-icon-rightful",
+            "title": "Multiple Owners?",
+            "content": {
+                "type": "text",
+                "value": "1 in 4 cars we check shows as having an active loan or finance against it."
             }
         }
     ]

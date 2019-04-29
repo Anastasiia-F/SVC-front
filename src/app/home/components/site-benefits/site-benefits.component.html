@@ -1,12 +1,22 @@
-<div class="svc-home-center-container container" fxLayout fxLayoutAlign="space-between start">
-        
-  <div *ngFor="let item of centerContent" fxFlex="28" fxFlex.lt-md="100" [ngClass.lt-md]="{'mb-12': true}">
+<div class="svc-home-center-container container"
+     fxLayoutAlign="space-between"
+     fxLayout="row wrap"
+     fxLayoutAlign.lt-lg="center">
+
+  <h2 fxFlex="100">Why a vehicle history check is a good idea</h2>
+
+  <div *ngFor="let item of centerContent"
+       fxFlex.lt-lg="33"
+       class="px-10"
+       ngClass.lt-lg="mb-18">
+
     <div class="svc-home-center-icon"
-         fxShow fxHide.lt-md>
-      <img [src]="item.icon">
+         fxHide.lt-md>
+<!--      <img [src]="item.icon">-->
+      <span class="svc-icon" [ngClass]="item.iconClass"></span>
     </div>
 
-    <h2>{{item.title}}</h2>
+    <h3>{{item.title}}</h3>
 
     <div class="svc-home-center-content">
 

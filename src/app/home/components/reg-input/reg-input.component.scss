@@ -1,8 +1,19 @@
 @import '../../../../styles/variables';
 
 .svc-home-header {
-  background-color: #f4f4f4;
-  padding: 120px 0 360px;
+  background: url("/assets/images/input-cars-grey-bg.jpg") center bottom 82px no-repeat #f4f4f4;
+  background-size: 993px auto;
+  padding: 120px 0 365px;
+
+  &.reg-inp-footer {
+    background: #fff;
+    padding: 120px 200px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("/assets/images/input-cars-grey-bg--x2.jpg");
+    background-size: 993px auto;
+  }
 
     @media #{$medium-and-down} {
 
