@@ -1,3 +1,5 @@
+@import "../../../../styles/variables";
+
 button {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -5,6 +7,7 @@ button {
     background: #10cf6c;
     border: none;
     cursor: pointer;
+    font-family: $museo;
     padding: 12px;
     &:focus {
         outline: none !important;
@@ -13,7 +16,6 @@ button {
 
 input[type='text'], input[type='email'], input[type='number'] {
     border: none;
-    padding: none;
     margin: 16px 0;
     background: #ececec;
     width: 95%;
@@ -35,4 +37,9 @@ input[type='text'], input[type='email'], input[type='number'] {
     padding: 14px;
     border-bottom: 2px solid #ececec;
     margin-bottom: 24px;
+}
+
+.price {
+  font-size: 50px;
+  font-family: $lato;
 }

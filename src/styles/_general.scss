@@ -14,11 +14,11 @@ html, body {
 }
 
 html, body, input, button {
-    font-family: $font-1;
+    font-family: $lato;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font-2;
+    font-family: $museo;
     color: $secondary;
 }
 
@@ -85,11 +85,11 @@ a {
 }
 
 .font-primary {
-    font-family: $font-1 !important;
+    font-family: $lato !important;
 }
 
 .font-secondary {
-    font-family: $font-2 !important;
+    font-family: $museo !important;
 }
 
 input:-internal-autofill-previewed,
