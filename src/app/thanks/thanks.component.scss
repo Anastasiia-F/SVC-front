@@ -1,0 +1,7 @@
+@import "../../styles/variables";
+.thanks-text {
+  font-family: $museo;
+  font-size: 42px;
+  min-height: calc(100vh - 80px - 203px);
+  text-align: center;
+}

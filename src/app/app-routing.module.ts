@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
+import { ThanksComponent} from "./thanks/thanks.component";
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
   {
     path: 'payment-details',
     loadChildren: './payment-details/payment-details.module#PaymentDetailsModule'
-  },
+  },/*
   {
     path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
@@ -23,12 +24,11 @@ const routes: Routes = [
     path: 'main',
     canActivate: [AuthGuard],
     loadChildren: './dashboard/dashboard.module#DashboardModule'
-  },
-  // {
-  //   path: '',
-  //   redirectTo: '',
-  //   pathMatch: 'full'
-  // }
+  },*/
+  {
+    path: 'thank-you',
+    component: ThanksComponent
+  }
 ];
 
 @NgModule({

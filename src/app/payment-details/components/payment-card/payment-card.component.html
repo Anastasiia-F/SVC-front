@@ -4,24 +4,43 @@
   <form [formGroup]="paymentForm" (ngSubmit)="onPaymentSubmit()">
 
     <div fxLayout="row wrap" fxLayoutAlign="space-between start">
-      <div fxFlex="49">
+      <div fxFlex="48">
+        <label class="cl-secondary">Your name</label>
         <input name="name" type="text" formControlName="name" placeholder="Name" [ngClass]="{'input-invalid': submitted && name.errors?.required}">
       </div>
-      <div fxFlex="49">
-        <!--*ngIf="!auth.loggedIn"-->
-        <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
-      </div>
 
-      <div fxFlex="49">
-        <label class="cl-secondary">Card or debit card</label>
-        <input name="creditCard" type="number" formControlName="creditCard" placeholder="Card" [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}">
-      </div>
-
-      <div fxFlex="49">
+      <div fxFlex="48">
         <!--*ngIf="!auth.loggedIn"-->
         <label class="cl-secondary">We will send a link to the report to:</label>
         <input name="email" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
       </div>
+      <!--<div fxFlex="49">
+        &lt;!&ndash;*ngIf="!auth.loggedIn"&ndash;&gt;
+        <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
+      </div>-->
+
+      <div fxFlex="48">
+        <label class="cl-secondary">Card or debit card</label>
+        <input name="creditCard" type="number" formControlName="creditCard" placeholder="Card" [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}">
+      </div>
+
+      <div fxFlex="48"
+           fxLayout="row wrap"
+           fxLayoutAlign="space-between"
+           class="card-data">
+        <label class="cl-secondary" fxFlex="100">Date and CVV code</label>
+        <input name="creditCard"
+               type="date"
+               formControlName="date"
+               placeholder="Date"
+               [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}" />
+        <input name="creditCard"
+               type="number"
+               formControlName="cvc"
+               placeholder="CVV"
+               [ngClass]="{'input-invalid': submitted && creditCard.errors?.required}" />
+      </div>
+
     </div>
 
     <div class="my-24 fs-18 cl-secondary">+ (Optional) Have a referral code?</div>
@@ -39,10 +58,11 @@
     <div class="form-border"></div>
 
     <div fxLayout fxLayoutAlign="space-between center">
-      <div>{{ price }}</div>
-      <button type="submit" fxLayout fxLayoutAlign="start center">
-        <span class="mr-16 fs-16">Pay Now</span>
-        <fa-icon [icon]="['fas', 'angle-right']"></fa-icon>
+      <div class="price">£ {{ price }}</div>
+      <button type="submit">
+        <span class="mr-16">Pay Now</span>
+        <fa-icon class="icon"
+                 [icon]="['fas', 'angle-right']"></fa-icon>
       </button>
     </div>
   </form>
