@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
+import {TermCondsComponent} from "./instractions-pages/term-conds/term-conds.component";
+import {LegalNoticeComponent} from "./instractions-pages/legal-notice/legal-notice.component";
+import {ContactsComponent} from "./instractions-pages/contacts/contacts.component";
 
 const routes: Routes = [
   {
@@ -24,6 +27,18 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
+  {
+    path: 'terms-and-conditions',
+    component: TermCondsComponent
+  },
+  {
+    path: 'legal-notice',
+    component: LegalNoticeComponent
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent
+  }
   // {
   //   path: '',
   //   redirectTo: '',

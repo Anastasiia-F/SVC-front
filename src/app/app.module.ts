@@ -12,6 +12,7 @@ import { carDataReducer } from './state/car-data.reducer';
 import { CarDataEffects } from './state/car-data.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { InstractionsPagesModule } from "./instractions-pages/instractions-pages.module";
 
 const customNotifierConfig: NotifierOptions = {
   position: {
@@ -46,6 +47,7 @@ const customNotifierConfig: NotifierOptions = {
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    InstractionsPagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
