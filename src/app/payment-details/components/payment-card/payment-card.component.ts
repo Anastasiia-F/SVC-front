@@ -38,7 +38,9 @@ export class PaymentCardComponent implements OnInit {
       creditCard: new FormControl('', [Validators.required]),
       email: new FormControl('', []),
       receiveInfo: new FormControl(false),
-      agreePolicies: new FormControl(false)
+      agreePolicies: new FormControl(false),
+      date: new FormControl(false),
+      cvc: new FormControl(false)
     });
   }
 
@@ -46,12 +48,12 @@ export class PaymentCardComponent implements OnInit {
     this.submitted = true;
 
     if (this.paymentForm.errors) {
-      this.notifier.notify('error', 'Please correct your infos.');
+        this.notifier.notify('error', 'Please correct your infos.');
       return;
     }
 
     if (!this.paymentForm.value['agreePolicies']) {
-      this.notifier.notify('error', 'You should agree on our Terms & Conditions.');
+        this.notifier.notify('error', 'You should agree on our Terms & Conditions.');
       return;
     }
 
@@ -80,6 +82,8 @@ export class PaymentCardComponent implements OnInit {
         .subscribe(res => {
           this.router.navigate(['auth', 'set-password']);
         });
+
+    this.router.navigate(['thank-you']);
   }
 
   get name() {
@@ -96,6 +100,14 @@ export class PaymentCardComponent implements OnInit {
 
   get email() {
     return this.paymentForm.get('email');
+  }
+
+  get date() {
+    return this.paymentForm.get('date');
+  }
+
+  get cvc() {
+    return this.paymentForm.get('cvc');
   }
 
 }

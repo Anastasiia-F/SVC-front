@@ -6,6 +6,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { RegInputComponent } from './components/reg-input/reg-input.component';
 import { SiteBenefitsComponent } from './components/site-benefits/site-benefits.component';
 import { AboutComponent } from './components/about/about.component';
+import { CustomerReviewsComponent } from './components/reviews/reviews.component';
+import { AboutMoreComponent } from './components/about-more/about-more.component';
 
 const routes = [
   {
@@ -19,7 +21,9 @@ const routes = [
     LayoutComponent,
     RegInputComponent,
     SiteBenefitsComponent,
-    AboutComponent
+    AboutComponent,
+    CustomerReviewsComponent,
+    AboutMoreComponent
   ],
   imports: [
     CommonModule,

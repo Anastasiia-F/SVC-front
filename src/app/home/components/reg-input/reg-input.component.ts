@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
 import { Store, select} from "@ngrx/store";
@@ -16,6 +16,8 @@ export class RegInputComponent implements OnInit {
 
   svcReg: string;
 
+  @Input() isFooter: boolean;
+
   constructor(
     private router: Router,
     private notifier: NotifierService,
@@ -30,30 +32,8 @@ export class RegInputComponent implements OnInit {
 
   search() {
 
-    /*this.carData.fetchData(this.svcReg).then(
-        response => {
-          if(response === 'Success') {
-            this.router.navigate(['/plans']);
-            return;
-          }
-          this.notifier.notify('error', 'Service is not available.');
-        }
-    );*/
-
     this.store.dispatch(new FetchSummary(this.svcReg));
 
-
-    /*this.check.vdiFullCheck(this.svcReg)
-        .subscribe(res => {
-      if (res.msg !== 'Success') {
-        this.notifier.notify('error', 'Service is not available.');
-        return;
-      }
-      this.check.searchedData = res.data;
-      // localStorage.setItem('car', JSON.stringify());
-      this.carData.setData(res.data);
-      this.router.navigate(['/plans']);
-    });*/
   }
 
 }

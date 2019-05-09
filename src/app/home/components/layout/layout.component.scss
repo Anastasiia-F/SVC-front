@@ -2,29 +2,25 @@
 
 .svc-home {
 
-    .svc-home-body {
+  .svc-home-body {}
 
-        position: relative;
+  .svc-home-center {
+    background-image: linear-gradient(to bottom, #f4f4f4 49.5%, #ffffff 50%, #ffffff);
+  }
 
-        .svc-home-center {
-            position: absolute;
-            width: 100%;
-            top: -180px;
+  .svc-home-about {
+    background: #ffffff;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 150px 0 120px;
 
-            @media #{$medium-and-down} {
-                position: unset;
-            }
-        }
-    
-        .svc-home-about {
-            background: #ffffff;
-            padding: 15% 20%;
-
-            @media #{$medium-and-down} {
-                padding: 40px 15px;
-            }
-        }
-
+    @media #{$medium-and-down} {
+      padding: 40px 15px;
     }
+  }
+
+  .svc-home-reviews {
+
+  }
     
 }

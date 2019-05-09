@@ -1,0 +1,47 @@
+@import '../../../../styles/variables';
+
+.review-block {
+  background-color: $background;
+  padding: 20px 50px 43px;
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+
+  .review-item {
+    max-width: 250px;
+    margin: 0 auto;
+
+    p {
+      font-style: italic;
+    }
+
+    p:before,
+    p:after {
+      font-family: $icons;
+      font-size: 13px;
+      content: "\e61c";
+      display: inline-block;
+      margin-right: 10px;
+    }
+    p:after {
+      margin-right: 0;
+      margin-left: 10px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 21px;
+      font-weight: normal;
+      padding: 7px 0 15px;
+    }
+
+    .name {
+      padding-top: 15px;
+    }
+
+  }
+}

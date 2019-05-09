@@ -3,9 +3,10 @@
     <a class="pt-8 pl-8 pr-8" [ngClass]="{'back-white': paymentMethod == 'card'}" (click)="paymentMethod = 'card'">
       <img height="40" src="assets/images/pay-by-card.png" alt="">
     </a>
+    <!--
     <a class="pt-8 pl-8 pr-8" [ngClass]="{'back-white': paymentMethod == 'paypal'}" (click)="paymentMethod = 'paypal'">
       <img height="30" src="assets/images/pay-by-paypal.png" alt="">
-    </a>
+    </a>-->
   </div>
   <div class="payment-tab-content back-white">
     <div class="container" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column">
@@ -13,9 +14,9 @@
         <ng-container *ngIf="paymentMethod == 'card'">
           <app-payment-card [plan]="plan" [price]="price" [vrm]="vrm"></app-payment-card>
         </ng-container>
-        <ng-container *ngIf="paymentMethod == 'paypal'">
+        <!--<ng-container *ngIf="paymentMethod == 'paypal'">
           <app-payment-paypal></app-payment-paypal>
-        </ng-container>
+        </ng-container>-->
       </div>
 
       <div fxFlex="30" fxFlex.lt-md="false">
