@@ -28,7 +28,7 @@ export class CarDataEffects {
             )
         );
 
-    constructor (
+    constructor(
         private router: Router,
         private http: HttpClient,
         private actions$: Actions

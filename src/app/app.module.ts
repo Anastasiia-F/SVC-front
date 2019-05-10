@@ -6,6 +6,7 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { carDataReducer } from './state/car-data.reducer';
@@ -47,6 +48,7 @@ const customNotifierConfig: NotifierOptions = {
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    FlexLayoutModule,
     InstractionsPagesModule
   ],
   providers: [],
