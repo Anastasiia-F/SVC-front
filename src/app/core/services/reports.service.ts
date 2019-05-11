@@ -1,31 +1,42 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import {Observable} from "rxjs";
+import { of } from "rxjs";
 
 @Injectable()
 export class ReportsService {
 
-  url = '/account/reports';
-  reportObjectList : Object = {};
+  allReportsUrl = '/account/reports';
+  reportByIDUrl = '/account/report/';
+  reportObjectList : Object = {}
 
   constructor(
     private http: HttpClient
   ) { }
 
   getAllReports() {
-    return this.http.get(this.url)
+    return this.http.get(this.allReportsUrl)
       .pipe(
         map((respond)=> {
             respond['reports'].forEach(item => {
-                this.reportObjectList[item.registration] = item;
+                this.reportObjectList[item._id] = item;
             });
             return this.reportObjectList;
           })
       )
   }
 
-  getReportsForVrm(vrm: string) {
-    return this.reportObjectList[vrm];
+  getReportsByID(id: string) {
+    if(Object.keys(this.reportObjectList).length && this.reportObjectList[id]) {
+      return of(this.reportObjectList[id]);
+    }
+    else {
+      return this.http.get(`${this.reportByIDUrl}${id}`)
+        .pipe(
+          map((resp)=> {
+            return this.reportObjectList[id] = resp['report'];
+          })
+        )
+    }
   }
 }

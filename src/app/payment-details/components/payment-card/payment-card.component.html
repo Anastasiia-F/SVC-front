@@ -12,12 +12,8 @@
       <div fxFlex="48">
         <!--*ngIf="!auth.loggedIn"-->
         <label class="cl-secondary">We will send a link to the report to:</label>
-        <input name="email" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
+        <input name="creditCard" type="email" formControlName="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors?.required}">
       </div>
-      <!--<div fxFlex="49">
-        &lt;!&ndash;*ngIf="!auth.loggedIn"&ndash;&gt;
-        <input name="phone" type="text" formControlName="phone" placeholder="Phone" [ngClass]="{'input-invalid': submitted && phone.errors?.required}">
-      </div>-->
 
       <div fxFlex="48">
         <label class="cl-secondary">Card or debit card</label>

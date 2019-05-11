@@ -13,13 +13,14 @@ import { ValuationComponent } from './components/valuation/valuation.component';
 import { MotHistoryComponent } from './components/mot-history/mot-history.component';
 import { MileageComponent } from './components/mileage/mileage.component';
 import { ReportsListComponent } from './components/reports-list/reports-list.component';
+import { CheckDataParserComponent } from './components/check-icon/check-data-parser.component';
 
 const routes = [{
     path: '',
     component: ReportsListComponent,
 },
 {
-    path:':vrm',
+    path:':id',
     component: LayoutComponent,
     children: [
         {
@@ -76,7 +77,8 @@ const routes = [{
     ValuationComponent,
     MotHistoryComponent,
     MileageComponent,
-    ReportsListComponent
+    ReportsListComponent,
+    CheckDataParserComponent
   ],
     imports: [
         CommonModule,

@@ -1,11 +1,11 @@
 <div class="container">
   <table class="striped-table">
-    <tr class="table-row" *ngFor="let report of allReports">
+    <tr class="table-row" *ngFor="let report of (allReports$ | async)">
       <td>{{report.data.Make }}</td>
       <td>{{ report.data.Model }}</td>
       <td>{{ report.createdAt | date }}</td>
       <td class="text-right">
-        <a [routerLink]="['./', report.registration]">Show detail</a>
+        <a [routerLink]="['./', report._id]">Show detail</a>
       </td>
     </tr>
   </table>

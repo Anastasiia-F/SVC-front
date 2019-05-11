@@ -1,56 +1,37 @@
 <div class="container">
   <div class="image-block">
     <div fxFlex>
-      <div *ngIf="report" fxFlex="61%">
-        <img [src]="report.img">
+      <div fxFlex="61%">
+        <img [src]="(report$ | async)?.img">
       </div>
-      <div *ngIf="report">
-        <div class="car-num">{{report.registration}}</div>
-        <div class="car-name"><span>{{report.data.Make}}</span><span>{{report.data.Model}}</span></div>
-        <div class="car-text">Color:<strong>{{report.data.Colour}}</strong> Year:<strong>{{report.data.DateFirstRegistered}}</strong></div>
-        <div class="car-text-2">Check performed: {{report.createdAt | date }}</div>
+      <div>
+        <div class="car-num">{{(report$ | async)?.registration}}</div>
+        <div class="car-name"><span>{{(report$ | async)?.data.Make}}</span><span>{{(report$ | async)?.data.Model}}</span></div>
+        <div class="car-text">Color:<strong>{{(report$ | async)?.data.Colour}}</strong> Year:<strong>{{(report$ | async)?.data.DateFirstRegistered}}</strong></div>
+        <div class="car-text-2">Check performed: {{(report$ | async)?.createdAt | date }}</div>
       </div>
     </div>
   </div>
   <h3>Report summary</h3>
-  <table class="striped-table">
+
+  <table *ngIf="report$ | async as report"
+         class="striped-table">
     <tr class="table-row">
       <td>Not Recorded Stolen</td>
       <td>
-        <span *ngIf="!report.data['Stolen']">
-          <fa-icon class="feature-supported"
-                   [icon]="['fas', 'check']"></fa-icon>
-        </span>
-        <span *ngIf="report.data['Stolen']">
-          <fa-icon class="feature-unsupported"
-                   [icon]="['fas', 'times']"></fa-icon>
-        </span>
+        <app-check-data-parser [condition]="!report.data['Stolen']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
       <td>Not Exported</td>
       <td>
-        <span *ngIf="!report.data['Exported']">
-          <fa-icon class="feature-supported"
-                   [icon]="['fas', 'check']"></fa-icon>
-        </span>
-        <span *ngIf="report.data['Exported']">
-          <fa-icon class="feature-unsupported"
-                   [icon]="['fas', 'times']"></fa-icon>
-        </span>
+        <app-check-data-parser [condition]="!report.data['Exported']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
       <td>No Plate Changes</td>
       <td>
-        <span *ngIf="report.data['PlateChangeCount'] == 0">
-          <fa-icon class="feature-supported"
-                   [icon]="['fas', 'check']"></fa-icon>
-        </span>
-        <span *ngIf="report.data['PlateChangeCount'] != 0">
-          <fa-icon class="feature-unsupported"
-                   [icon]="['fas', 'times']"></fa-icon>
-        </span>
+        <app-check-data-parser [condition]="!report.data['PlateChangeCount']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
@@ -66,7 +47,7 @@
       <td></td>
     </tr>
     <tr class="table-row">
-      <td>MOT Expiry: 23 / 10 / 2016</td>
+      <td>MOT Expiry</td>
       <td></td>
     </tr>
     <tr class="table-row">
@@ -80,14 +61,7 @@
     <tr class="table-row">
       <td>Not Scrapped</td>
       <td>
-        <span *ngIf="!report.data['Scrapped']">
-          <fa-icon class="feature-supported"
-                   [icon]="['fas', 'check']"></fa-icon>
-        </span>
-        <span *ngIf="report.data['Scrapped']">
-          <fa-icon class="feature-unsupported"
-                   [icon]="['fas', 'times']"></fa-icon>
-        </span>
+        <app-check-data-parser [condition]="!report.data['Scrapped']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
@@ -98,14 +72,7 @@
     <tr class="table-row">
       <td>Not Imported</td>
       <td>
-        <span *ngIf="!report.data['Imported']">
-          <fa-icon class="feature-supported"
-                   [icon]="['fas', 'check']"></fa-icon>
-        </span>
-        <span *ngIf="report.data['Imported']">
-          <fa-icon class="feature-unsupported"
-                   [icon]="['fas', 'times']"></fa-icon>
-        </span>
+        <app-check-data-parser [condition]="!report.data['Imported']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">

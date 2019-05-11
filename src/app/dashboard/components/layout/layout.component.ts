@@ -13,7 +13,7 @@ export class LayoutComponent implements OnInit {
   constructor (
       private route: ActivatedRoute
   ) {
-    this.vrm = this.route.snapshot.paramMap.get('vrm');
+    // this.vrm = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {map, mergeMap, shareReplay} from "rxjs/operators";
 import {ReportsService} from "../../../core/services/reports.service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
-import { Observable } from "rxjs";
 import { Report } from "../../../core/models/report";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-summary',
@@ -11,25 +12,23 @@ import { Report } from "../../../core/models/report";
 })
 export class SummaryComponent implements OnInit {
 
-    report: Report;
+    report$: Observable<Report>;
 
   constructor(
       private reports: ReportsService,
       private activeRoute: ActivatedRoute
-  ) {
-    let vrm;
-    this.activeRoute.parent.paramMap.subscribe(
-        (params: ParamMap) => {
-          vrm = params.get('vrm');
-
-          this.report = this.reports.getReportsForVrm(vrm);
-          console.log(this.report)
-        }
-    );
-
-  }
+  ) {}
 
   ngOnInit() {
+    let id;
+    this.report$ = this.activeRoute.parent.paramMap.
+    pipe(
+      mergeMap((params:ParamMap) => {
+        id = params.get('id');
+        return this.reports.getReportsByID(id);
+      }),
+      shareReplay()
+    );
   }
 
 }

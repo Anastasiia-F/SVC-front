@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {ReportsService} from "../../../core/services/reports.service";
+import {map} from "rxjs/operators";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-reports-list',
@@ -9,7 +11,7 @@ import {ReportsService} from "../../../core/services/reports.service";
 })
 export class ReportsListComponent implements OnInit {
 
-    allReports: any = [];
+    allReports$: Observable<any>;
     router: Router;
 
     constructor (
@@ -17,10 +19,13 @@ export class ReportsListComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.reports.getAllReports()
-            .subscribe(res => {
-                this.allReports = Object.keys(res).map(key => res[key]);
+      this.allReports$ = this.reports.getAllReports()
+          .pipe(
+            map((res)=> {
+              return Object.keys(res)
+                        .map(key => res[key]);
             })
+          )
     }
 
     shoReport(vrm) {

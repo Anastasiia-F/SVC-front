@@ -34,7 +34,6 @@ export class PaymentCardComponent implements OnInit {
   ngOnInit() {
     this.paymentForm = new FormGroup({
       name: new FormControl('', [Validators.required]),
-      phone: new FormControl('', []),
       creditCard: new FormControl('', [Validators.required]),
       email: new FormControl('', []),
       receiveInfo: new FormControl(false),
@@ -83,15 +82,11 @@ export class PaymentCardComponent implements OnInit {
           this.router.navigate(['auth', 'set-password']);
         });
 
-    this.router.navigate(['thank-you']);
+    // this.router.navigate(['thank-you']);
   }
 
   get name() {
     return this.paymentForm.get('name');
-  }
-
-  get phone() {
-    return this.paymentForm.get('phone');
   }
 
   get creditCard() {
