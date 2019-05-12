@@ -28,8 +28,4 @@ export class ReportsListComponent implements OnInit {
           )
     }
 
-    shoReport(vrm) {
-        // this.router.navigate(['/report$', vrm])
-    }
-
 }

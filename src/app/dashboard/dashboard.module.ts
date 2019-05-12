@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ReportsService } from '../core/services/reports.service';
 import { SharedModule} from "../shared/shared.module";
 import { LayoutComponent } from './components/layout/layout.component';
-import { SummaryComponent } from './components/summary/summary.component';
+import { BatteryData } from './components/battery/battery.component';
 import { AlertsComponent } from './components/alerts/alerts.component';
 import { CheckResultsComponent } from './components/check-results/check-results.component';
 import { SpecComponent } from './components/spec/spec.component';
@@ -14,6 +14,7 @@ import { MotHistoryComponent } from './components/mot-history/mot-history.compon
 import { MileageComponent } from './components/mileage/mileage.component';
 import { ReportsListComponent } from './components/reports-list/reports-list.component';
 import { CheckDataParserComponent } from './components/check-icon/check-data-parser.component';
+import { DataParserService } from "../core/services/data-parser.service";
 
 const routes = [{
     path: '',
@@ -25,12 +26,12 @@ const routes = [{
     children: [
         {
             path: '',
-            redirectTo: 'summary',
+            redirectTo: 'battery',
             pathMatch: 'full'
         },
         {
-            path: 'summary',
-            component: SummaryComponent
+            path: 'battery',
+            component: BatteryData
         },
         {
             path: 'alerts',
@@ -69,7 +70,7 @@ const routes = [{
 @NgModule({
   declarations: [
     LayoutComponent,
-    SummaryComponent,
+    BatteryData,
     AlertsComponent,
     CheckResultsComponent,
     SpecComponent,
@@ -86,7 +87,8 @@ const routes = [{
         RouterModule.forChild(routes)
     ],
   providers: [
-    ReportsService
+    ReportsService,
+    DataParserService
   ]
 })
 export class DashboardModule { }

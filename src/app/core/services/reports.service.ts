@@ -26,10 +26,21 @@ export class ReportsService {
       )
   }
 
-  getReportsByID(id: string) {
-    if(Object.keys(this.reportObjectList).length && this.reportObjectList[id]) {
-      return of(this.reportObjectList[id]);
+  getReportsByID (
+    id: string,
+    type: string
+  ) {
+
+    switch (type) {
+      case 'summary':
+        break;
+      case 'motHistory':
+        break;
     }
+
+    if(Object.keys(this.reportObjectList).length) {
+      return of(this.reportObjectList[id]['data'][type]);
+    }/*
     else {
       return this.http.get(`${this.reportByIDUrl}${id}`)
         .pipe(
@@ -37,6 +48,6 @@ export class ReportsService {
             return this.reportObjectList[id] = resp['report'];
           })
         )
-    }
+    }*/
   }
 }
