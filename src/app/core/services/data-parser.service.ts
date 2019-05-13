@@ -14,7 +14,6 @@ export class DataParserService {
   }
 
   private createFlatObject(object) {
-    console.log(object);
 
     for(let key in object) {
 
@@ -22,15 +21,14 @@ export class DataParserService {
         typeof object[key] === 'number' ||
         typeof object[key] === 'boolean' ||
         object[key] === null) {
-        this.flatObject[key] = object[key];
+
+        let _key = key.match(/[A-Z][a-z]+|[0-9]+/g).join(" ");
+
+        this.flatObject[_key] = object[key];
       }
       else {
         this.createFlatObject(object[key]);
       }
     }
-  }
-
-  private isObject (obj) {
-    return obj.constructor === Object;
   }
 }

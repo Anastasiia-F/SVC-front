@@ -14,9 +14,13 @@
   </div>
   <h3>Report summary</h3>-->
 
-  <table *ngIf="report$ | async as report"
+  <table *ngIf="report"
          class="striped-table">
-    <tr class="table-row">
+    <tr class="table-row" *ngFor="let reportItem of report | keyvalue">
+      <td>{{ reportItem.key }}</td>
+      <td>{{ reportItem.value }}</td>
+    </tr>
+    <!--<tr class="table-row">
       <td>Not Recorded Stolen</td>
       <td>
         <app-check-data-parser [condition]="!report.data['Stolen']"></app-check-data-parser>
@@ -104,7 +108,7 @@
       <td>Fuel costs</td>
       <td>
       </td>
-    </tr>
+    </tr>-->
   </table>
 </div>
 
