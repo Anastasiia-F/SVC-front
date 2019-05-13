@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {map, mergeMap, shareReplay} from "rxjs/operators";
+import { mergeMap } from "rxjs/operators";
 import {ReportsService} from "../../../core/services/reports.service";
 import {ActivatedRoute, ParamMap} from "@angular/router";
-import { Report } from "../../../core/models/report";
-import {Observable} from "rxjs";
 import { DataParserService } from "../../../core/services/data-parser.service";
 
 @Component({
@@ -32,7 +30,6 @@ export class BatteryData implements OnInit {
     )
     .subscribe((result)=> {
       this.report = this.parsService.setObject(result);
-        console.log(this.report);
     });
   }
 

@@ -15,6 +15,8 @@ import { MileageComponent } from './components/mileage/mileage.component';
 import { ReportsListComponent } from './components/reports-list/reports-list.component';
 import { CheckDataParserComponent } from './components/check-icon/check-data-parser.component';
 import { DataParserService } from "../core/services/data-parser.service";
+import {TextSeparatorService} from "../core/services/text-separator.service";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes = [{
     path: '',
@@ -31,35 +33,66 @@ const routes = [{
         },
         {
             path: 'battery',
-            component: BatteryData
-        },
-        {
-            path: 'alerts',
-            component: AlertsComponent
-        },
-        {
-            path: 'check-results',
-            component: CheckResultsComponent
-        },
-        {
-            path: 'spec',
-            component: SpecComponent
-        },
-        {
-            path: 'economy',
-            component: EconomyComponent
-        },
-        {
-            path: 'valuation',
-            component: ValuationComponent
+            component: DashboardComponent,
+            data: {
+              reportName: 'BatteryData'
+            }
         },
         {
             path: 'mot-history',
-            component: MotHistoryComponent
+            component: DashboardComponent,
+            data: {
+              reportName: 'MotHistoryData'
+            }
         },
         {
-            path: 'mileage',
-            component: MileageComponent
+            path: 'tyres',
+            component: DashboardComponent,
+          data: {
+              reportName: 'TyreData'
+          }
+        },
+        {
+            path: 'can-price',
+            component: DashboardComponent,
+          data: {
+              reportName: 'ValuationCanPrice'
+          }
+        },
+        {
+            path: 'valuation',
+            component: DashboardComponent,
+          data: {
+            reportName: 'ValuationData'
+          }
+        },
+        {
+            path: 'vdi-check',
+            component: DashboardComponent,
+          data: {
+            reportName: 'VdiCheckFull'
+          }
+        },
+        {
+            path: 'vehicle-mot-history',
+            component: DashboardComponent,
+          data: {
+            reportName: 'VehicleAndMotHistory'
+          }
+        },
+        {
+            path: 'vehicle',
+            component: DashboardComponent,
+          data: {
+            reportName: 'VehicleData'
+          }
+        },
+        {
+            path: 'vehicle-tax',
+            component: DashboardComponent,
+          data: {
+            reportName: 'VehicleTaxData'
+          }
         }
     ]
 
@@ -79,7 +112,8 @@ const routes = [{
     MotHistoryComponent,
     MileageComponent,
     ReportsListComponent,
-    CheckDataParserComponent
+    CheckDataParserComponent,
+    DashboardComponent
   ],
     imports: [
         CommonModule,
@@ -88,7 +122,8 @@ const routes = [{
     ],
   providers: [
     ReportsService,
-    DataParserService
+    DataParserService,
+    TextSeparatorService
   ]
 })
 export class DashboardModule { }

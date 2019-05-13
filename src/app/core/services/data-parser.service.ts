@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { TextSeparatorService } from "./text-separator.service";
+
 
 @Injectable()
 export class DataParserService {
 
   flatObject: Object = {};
 
-  constructor () {}
+  constructor (
+    private textSeparator: TextSeparatorService
+  ) {}
 
   public setObject(object): Object {
 
@@ -22,7 +26,7 @@ export class DataParserService {
         typeof object[key] === 'boolean' ||
         object[key] === null) {
 
-        let _key = key.match(/[A-Z][a-z]+|[0-9]+/g).join(" ");
+        let _key = this.textSeparator.getText(key);
 
         this.flatObject[_key] = object[key];
       }

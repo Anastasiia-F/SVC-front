@@ -31,13 +31,6 @@ export class ReportsService {
     type: string
   ) {
 
-    switch (type) {
-      case 'summary':
-        break;
-      case 'motHistory':
-        break;
-    }
-
     if(Object.keys(this.reportObjectList).length) {
       return of(this.reportObjectList[id]['data'][type]);
     }/*
