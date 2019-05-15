@@ -1,11 +1,19 @@
 <div class="svc-login" fxLayout fxLayoutAlign="center center">
     <form [formGroup]="form" (ngSubmit)="login()">
       <div class="mb-36">
-        <input name="email" formControlName="email" type="email" placeholder="Email" [ngClass]="{'input-invalid': submitted && email.errors}">
+        <input name="email"
+               formControlName="email"
+               type="email"
+               placeholder="Email"
+               [ngClass]="{'input-invalid': submitted && email.errors}">
       </div>
 
       <div class="mb-36">
-        <input name="password" formControlName="password" type="password" placeholder="password" [ngClass]="{'input-invalid': submitted && password.errors}">
+        <input name="password"
+               formControlName="password"
+               type="password"
+               placeholder="password"
+               [ngClass]="{'input-invalid': submitted && password.errors}">
       </div>
 
       <div>

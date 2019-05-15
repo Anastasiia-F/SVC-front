@@ -2,7 +2,6 @@
   padding: 200px 0 300px;
   input {
     border: none;
-    padding: none;
     margin: 16px 0;
     background: #ececec;
     width: 300px;
@@ -10,10 +9,7 @@
     padding: 8px;
     border-radius: 2px;
     display: block;
-
-    &:focus {
-        outline: none;
-    }
+    outline: none;
   }
 
   button {

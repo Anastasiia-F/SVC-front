@@ -1,6 +1,15 @@
 <div fxLayout="row"
      fxLayoutAlign="space-between"
-     class="container">
+     class="container"
+*ngIf="showTabs">
+  <a [routerLink]="['vdi-check']"
+     routerLinkActive="tabs-button-active"
+     fxLayout="row"
+     fxLayoutAlign="center center"
+     class="tabs-button">
+    <fa-icon class="feature-supported" [icon]="['fas', 'dollar-sign']"></fa-icon>
+    <span class="tab-text">Vdi Check</span>
+  </a>
   <a [routerLink]="['battery']"
      routerLinkActive="tabs-button-active"
      [routerLinkActiveOptions]="{exact: true}"
@@ -42,14 +51,6 @@
     <fa-icon class="feature-supported" [icon]="['fas', 'gas-pump']"></fa-icon>
     <span class="tab-text">Valuation</span>
   </a>
-  <a [routerLink]="['vdi-check']"
-     routerLinkActive="tabs-button-active"
-     fxLayout="row"
-     fxLayoutAlign="center center"
-     class="tabs-button">
-    <fa-icon class="feature-supported" [icon]="['fas', 'dollar-sign']"></fa-icon>
-    <span class="tab-text">Vdi Check</span>
-  </a>
   <a [routerLink]="['vehicle-mot-history']"
      routerLinkActive="tabs-button-active"
      fxLayout="row"
@@ -71,7 +72,7 @@
      fxLayout="row"
      fxLayoutAlign="center center"
      class="tabs-button">
-    <fa-icon class="feature-supported" [icon]="['fas', 'tachometer-alt']"></fa-icon>
+    <fa-icon class="feature-supported" [icon]="['fas', 'dollar-sign']"></fa-icon>
     <span class="tab-text">Vehicle Tax</span>
   </a>
 </div>

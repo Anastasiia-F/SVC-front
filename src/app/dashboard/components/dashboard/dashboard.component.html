@@ -3,7 +3,6 @@
     <tr class="table-row"
         [ngClass]="{title: reportItem.isTitle}"
         *ngFor="let reportItem of report$ | async">
-<!--      <td>{{ reportItem.level }}</td>-->
       <td [style.paddingLeft.px]="reportItem.level * 20"> {{ reportItem.name }}</td>
       <td>
         <app-table-info-parser data="{{reportItem.data}}"></app-table-info-parser>

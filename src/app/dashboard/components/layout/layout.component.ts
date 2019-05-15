@@ -8,15 +8,20 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class LayoutComponent implements OnInit {
 
-  vrm: String;
+  showTabs: boolean = true;
 
   constructor (
       private route: ActivatedRoute
   ) {
-    // this.vrm = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
+    // console.log(this.route.outlet);
+    this.route.queryParams.subscribe((data)=> {
+      if(data.reportType === 'basic') {
+        this.showTabs = false;
+      }
+    });
   }
 
 }

@@ -4,16 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ReportsService } from '../core/services/reports.service';
 import { SharedModule} from "../shared/shared.module";
 import { LayoutComponent } from './components/layout/layout.component';
-import { BatteryData } from './components/battery/battery.component';
-import { AlertsComponent } from './components/alerts/alerts.component';
-import { CheckResultsComponent } from './components/check-results/check-results.component';
-import { SpecComponent } from './components/spec/spec.component';
-import { EconomyComponent } from './components/economy/economy.component';
-import { ValuationComponent } from './components/valuation/valuation.component';
-import { MotHistoryComponent } from './components/mot-history/mot-history.component';
-import { MileageComponent } from './components/mileage/mileage.component';
 import { ReportsListComponent } from './components/reports-list/reports-list.component';
-import { CheckDataParserComponent } from './components/check-icon/check-data-parser.component';
 import { DataParserService } from "../core/services/data-parser.service";
 import {TextSeparatorService} from "../core/services/text-separator.service";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -29,14 +20,14 @@ const routes = [{
     children: [
         {
             path: '',
-            redirectTo: 'battery',
+            redirectTo: 'vdi-check',
             pathMatch: 'full'
         },
         {
-            path: 'battery',
+            path: 'vdi-check',
             component: DashboardComponent,
             data: {
-              reportName: 'BatteryData'
+              reportName: 'VdiCheckFull'
             }
         },
         {
@@ -68,10 +59,10 @@ const routes = [{
           }
         },
         {
-            path: 'vdi-check',
+            path: 'battery',
             component: DashboardComponent,
           data: {
-            reportName: 'VdiCheckFull'
+            reportName: 'BatteryData'
           }
         },
         {
@@ -94,7 +85,15 @@ const routes = [{
           data: {
             reportName: 'VehicleTaxData'
           }
+        },
+        {
+          path: 'basic',
+          component: DashboardComponent,
+          data: {
+            reportName: 'basic'
+          }
         }
+
     ]
 
 }
@@ -104,16 +103,7 @@ const routes = [{
 @NgModule({
   declarations: [
     LayoutComponent,
-    BatteryData,
-    AlertsComponent,
-    CheckResultsComponent,
-    SpecComponent,
-    EconomyComponent,
-    ValuationComponent,
-    MotHistoryComponent,
-    MileageComponent,
     ReportsListComponent,
-    CheckDataParserComponent,
     DashboardComponent,
     TableInfoParserComponent
   ],
