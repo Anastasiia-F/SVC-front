@@ -1,20 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { of } from "rxjs";
+import {Observable, of} from "rxjs";
 
 @Injectable()
 export class ReportsService {
 
   allReportsUrl = '/account/reports';
-  reportByIDUrl = '/account/report/';
-  reportObjectList : Object = {}
+  reportObjectList : Object = {};
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getAllReports() {
+  getAllReports(): Observable<object> {
     return this.http.get(this.allReportsUrl)
       .pipe(
         map((respond)=> {
@@ -30,17 +29,16 @@ export class ReportsService {
     id: string,
     type: string
   ) {
-
-    if(Object.keys(this.reportObjectList).length) {
-      return of(this.reportObjectList[id]['data'][type]);
-    }/*
-    else {
-      return this.http.get(`${this.reportByIDUrl}${id}`)
-        .pipe(
-          map((resp)=> {
-            return this.reportObjectList[id] = resp['report'];
-          })
-        )
-    }*/
-  }
+      if(Object.keys(this.reportObjectList).length) {
+        return of(this.reportObjectList[id]['data'][type]);
+      }
+      else {
+        return  this.getAllReports()
+          .pipe(
+            map((result)=> {
+                return result[id]['data'][type];
+            })
+          )
+        }
+    }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
 import {ReportsService} from "../../../core/services/reports.service";
 import {map} from "rxjs/operators";
 import {Observable} from "rxjs";
@@ -12,7 +11,6 @@ import {Observable} from "rxjs";
 export class ReportsListComponent implements OnInit {
 
     allReports$: Observable<any>;
-    router: Router;
 
     constructor (
         private reports: ReportsService

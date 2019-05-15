@@ -1,0 +1,10 @@
+<span *ngIf="isCheckIcon">
+  <fa-icon class="feature-supported"
+           [icon]="['fas', 'check']"></fa-icon>
+</span>
+<span *ngIf="isCrossIcon">
+  <fa-icon class="feature-unsupported"
+           [icon]="['fas', 'times']"></fa-icon>
+</span>
+
+<span *ngIf="rawData">{{ rawData }}</span>

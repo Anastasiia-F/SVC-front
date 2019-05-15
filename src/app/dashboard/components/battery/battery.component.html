@@ -2,13 +2,13 @@
   <!--<div class="image-block">
     <div fxFlex>
       <div fxFlex="61%">
-        <img [src]="(report$ | async)?.img">
+        <img [src]="(report$$ | async)?.img">
       </div>
       <div>
-        <div class="car-num">{{(report$ | async)?.registration}}</div>
-        <div class="car-name"><span>{{(report$ | async)?.data.Make}}</span><span>{{(report$ | async)?.data.Model}}</span></div>
-        <div class="car-text">Color:<strong>{{(report$ | async)?.data.Colour}}</strong> Year:<strong>{{(report$ | async)?.data.DateFirstRegistered}}</strong></div>
-        <div class="car-text-2">Check performed: {{(report$ | async)?.createdAt | date }}</div>
+        <div class="car-num">{{(report$$ | async)?.registration}}</div>
+        <div class="car-name"><span>{{(report$$ | async)?.data.Make}}</span><span>{{(report$$ | async)?.data.Model}}</span></div>
+        <div class="car-text">Color:<strong>{{(report$$ | async)?.data.Colour}}</strong> Year:<strong>{{(report$$ | async)?.data.DateFirstRegistered}}</strong></div>
+        <div class="car-text-2">Check performed: {{(report$$ | async)?.createdAt | date }}</div>
       </div>
     </div>
   </div>
@@ -23,19 +23,19 @@
     <!--<tr class="table-row">
       <td>Not Recorded Stolen</td>
       <td>
-        <app-check-data-parser [condition]="!report.data['Stolen']"></app-check-data-parser>
+        <app-check-data-parser [condition]="!report$.data['Stolen']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
       <td>Not Exported</td>
       <td>
-        <app-check-data-parser [condition]="!report.data['Exported']"></app-check-data-parser>
+        <app-check-data-parser [condition]="!report$.data['Exported']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
       <td>No Plate Changes</td>
       <td>
-        <app-check-data-parser [condition]="!report.data['PlateChangeCount']"></app-check-data-parser>
+        <app-check-data-parser [condition]="!report$.data['PlateChangeCount']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
@@ -65,7 +65,7 @@
     <tr class="table-row">
       <td>Not Scrapped</td>
       <td>
-        <app-check-data-parser [condition]="!report.data['Scrapped']"></app-check-data-parser>
+        <app-check-data-parser [condition]="!report$.data['Scrapped']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">
@@ -76,7 +76,7 @@
     <tr class="table-row">
       <td>Not Imported</td>
       <td>
-        <app-check-data-parser [condition]="!report.data['Imported']"></app-check-data-parser>
+        <app-check-data-parser [condition]="!report$.data['Imported']"></app-check-data-parser>
       </td>
     </tr>
     <tr class="table-row">

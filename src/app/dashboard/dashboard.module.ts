@@ -17,6 +17,7 @@ import { CheckDataParserComponent } from './components/check-icon/check-data-par
 import { DataParserService } from "../core/services/data-parser.service";
 import {TextSeparatorService} from "../core/services/text-separator.service";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TableInfoParserComponent } from './components/table-info-parser/table-info-parser.component';
 
 const routes = [{
     path: '',
@@ -113,7 +114,8 @@ const routes = [{
     MileageComponent,
     ReportsListComponent,
     CheckDataParserComponent,
-    DashboardComponent
+    DashboardComponent,
+    TableInfoParserComponent
   ],
     imports: [
         CommonModule,
