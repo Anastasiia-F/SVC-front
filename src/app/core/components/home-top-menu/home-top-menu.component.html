@@ -1,4 +1,7 @@
-<div fxFlex fxLayoutAlign="center center" class="home-top-menu">
+<div fxFlex
+     fxLayoutAlign="center center"
+     class="home-top-menu"
+     *ngIf="isHomePage">
   <span (click)="scrollTo('why-check')">Why Check</span>
   <span (click)="scrollTo('about')">Our Data</span>
   <span (click)="scrollTo('reviews')">Customer Reviews</span>

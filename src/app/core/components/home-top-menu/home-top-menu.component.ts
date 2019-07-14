@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NavigationStart, Router} from "@angular/router";
 
 @Component({
   selector: 'app-home-top-menu',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeTopMenuComponent implements OnInit {
 
-  constructor() { }
+  isHomePage: boolean;
+
+  constructor(private router: Router) {
+    router.events.subscribe( event => {
+      if(event instanceof NavigationStart && event.url === '/') {
+        this.isHomePage = true;
+      }
+      else if(event instanceof NavigationStart) {
+        this.isHomePage = false;
+      }
+    })
+  }
 
   ngOnInit() {
+    // this.isHomePage
   }
 
   scrollTo(id) {
