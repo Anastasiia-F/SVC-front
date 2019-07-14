@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container"
+     id="about">
 
   <div fxLayout fxLayoutAlign="space-between center"
        fxLayoutGap="100px"
@@ -7,7 +8,7 @@
 
     <div fxFlex="30">
       <img fxShow fxHide.lt-md src="assets/images/single-car.png">
-      <h2>Where we get our vehicle information?</h2>  
+      <h2>Where we get our vehicle information?</h2>
     </div>
 
     <div fxFlex class="svc-home-about-text">
@@ -45,9 +46,9 @@
     </div>
 
     <div class="svc-home-pro-know" fxFlex fxLayout fxLayoutAlign="start center" fxFlex.lt-lg="false" fxLayoutAlign.lt-lg="center center">
-      
+
       <div fxLayout="column" fxLayoutAlign="start start" fxLayoutAlign.lt-md="center">
-        
+
         <div *ngFor="let item of ['one', 'two', 'three']" fxShow fxHide.lt-md fxLayout fxLayoutAlign="start center" class="mb-12">
           <fa-icon class="cl-purple mr-16 fs-30" [icon]="['far', 'check-circle']"></fa-icon>
           <span class="fs-16">Lorem ipsum item {{item}}</span>

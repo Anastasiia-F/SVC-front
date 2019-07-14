@@ -7,9 +7,10 @@ import { SharedModule } from '../shared/shared.module';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeTopMenuComponent } from './components/home-top-menu/home-top-menu.component';
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent],
+  declarations: [FooterComponent, HeaderComponent, HomeTopMenuComponent],
   imports: [
     CommonModule,
     HttpClientModule,

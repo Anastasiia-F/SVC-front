@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+
+.home-top-menu {
+  color: $secondary;
+  font-size: 18px;
+
+  span, a {
+    border-bottom: solid 1px transparent;
+    cursor: pointer;
+    margin: 0 10px;
+
+    &:hover {
+      border-bottom: solid 1px;
+    }
+  }
+}
